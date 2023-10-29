@@ -1,10 +1,8 @@
-# TEST SCENARIOS
+# Test scenarios
 
 TODO: collect test cases, resultats etc in Excel spreadsheet.
 
 For example:
-
-## 
 
 N.B. THIS IS AN EXAMPLE SPREADSHEET AND DOES NOT CONTAIN TRUE TEST RESULTS.
 
@@ -18,7 +16,7 @@ N.B. THIS IS AN EXAMPLE SPREADSHEET AND DOES NOT CONTAIN TRUE TEST RESULTS.
 |         | Line in RD       |                                                                             |                            |        |         |
 |         | Polygon          |                                                                             |                            |        |         |
 
-## DRAFT SPECIFCATION
+## Draft specification
 
 -   Geometry:
 
@@ -55,15 +53,15 @@ N.B. THIS IS AN EXAMPLE SPREADSHEET AND DOES NOT CONTAIN TRUE TEST RESULTS.
 
         -   Combine two datasets of BAG and BGT in 1 dataset?
 
-## GDAL IMPLEMENTATION
+## GDAL-dev implementation
 
--   Formats JSON-FG \<\>:
+### Formats JSON-FG \<\>:
 
-    -   GML
+-   GML
 
-        -   GeoJSON
+    -   GeoJSON
 
-            -   PostgreSQL
+        -   PostgreSQL
 
             -   OpenFileGeodatabase (ESRI)
 
@@ -75,7 +73,7 @@ N.B. THIS IS AN EXAMPLE SPREADSHEET AND DOES NOT CONTAIN TRUE TEST RESULTS.
 
                 -   URI: "http://www.opengis.net/def/crs/EPSG/0/28992"
 
-                    SAFE CURIE: "[EPSG: 3857]"
+                1.  SAFE CURIE: "[EPSG: 3857]"
 
         -   Others:
 
@@ -83,7 +81,7 @@ N.B. THIS IS AN EXAMPLE SPREADSHEET AND DOES NOT CONTAIN TRUE TEST RESULTS.
 
             -   
 
-## TEST EXECUTION
+## Test execution
 
 -   Datasets:
 
