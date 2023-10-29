@@ -3,19 +3,6 @@
 <meta content="text/html; charset=utf-8" http-equiv="content-type">
 <meta name="generator" content="ReSpec 34.1.4">
 <style>
-.issue-label{text-transform:initial}
-.warning>p:first-child{margin-top:0}
-.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}
-span.warning{padding:.1em .5em .15em}
-.issue.closed span.issue-number{text-decoration:line-through}
-.issue.closed span.issue-number::after{content:" (Closed)";font-size:smaller}
-.warning{border-color:#f11;border-width:.2em;border-style:solid;background:#fbe9e9}
-.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}
-li.task-list-item{list-style:none}
-input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}
-.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}
-</style>
-<style>
 dfn{cursor:pointer}
 .dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
 .dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
@@ -43,7 +30,7 @@ dfn{cursor:pointer}
   
   
 <script>document.title = respecConfig.title</script>
-<title>[TODO: Neem titel op in config.js]</title>
+<title>Testing OGC JSON-FG Draft Specification and its GDAL-DEV Implementation</title>
   
 <title>TODO: Vul hier de titel in</title>
   
@@ -126,21 +113,7 @@ ul.index code{color:inherit}
 #index-defined-here .print-only{display:initial}
 }
 </style>
-<meta name="description" content="TODO: vul in abstract.md een abstract in.">
-<style>
-.hljs{display:block;overflow-x:auto;padding:.5em;color:#383a42;background:#fafafa}
-.hljs-comment,.hljs-quote{color:#717277;font-style:italic}
-.hljs-doctag,.hljs-formula,.hljs-keyword{color:#a626a4}
-.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#ca4706;font-weight:700}
-.hljs-literal{color:#0b76c5}
-.hljs-addition,.hljs-attribute,.hljs-meta-string,.hljs-regexp,.hljs-string{color:#42803c}
-.hljs-built_in,.hljs-class .hljs-title{color:#9a6a01}
-.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#986801}
-.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#336ae3}
-.hljs-emphasis{font-style:italic}
-.hljs-strong{font-weight:700}
-.hljs-link{text-decoration:underline}
-</style>
+<meta name="description" content="We use this repository to document the test scenarios and test results of the">
 <style>
 
   .sidelabel {
@@ -301,16 +274,15 @@ ul.index code{color:inherit}
       "authors": [
         "T. Preston-Werner"
       ],
-      "date": "June 2013",
-      "id": "semver"
+      "date": "June 2013"
     }
   },
-  "title": "[TODO: Neem titel op in config.js]",
+  "title": "Testing OGC JSON-FG Draft Specification and its GDAL-DEV Implementation",
   "specStatus": "wv",
-  "specType": "HR",
-  "pubDomain": "dk",
+  "specType": "AL",
+  "pubDomain": "test-ogc-json-fg",
   "licence": "cc-by",
-  "shortName": "NL-ReSpec-GN-template",
+  "shortName": "test-ogc-json-fg",
   "editors": [
     {
       "name": "voornaam achternaam",
@@ -325,22 +297,16 @@ ul.index code{color:inherit}
       "companyURL": "https://www.geonovum.nl"
     }
   ],
-  "github": "https://github.com/Geonovum/NL-ReSpec-GN-template",
-  "alternateFormats": [
-    {
-      "label": "pdf",
-      "uri": "template.pdf"
-    }
-  ]
+  "github": "https://github.com/Geonovum/NL-ReSpec-GN-template"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/base.css"></head>
 
-<body class="h-entry"><div class="head">
+<body class="h-entry toc-inline"><div class="head">
     <a class="logo" href="https://www.geonovum.nl/geo-standaarden"><img alt="Geonovum" height="67" id="Geonovum" src="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.svg" width="132">
-  </a> <h1 id="title" class="title">[TODO: Neem titel op in config.js]</h1>
+  </a> <h1 id="title" class="title">Testing OGC JSON-FG Draft Specification and its GDAL-DEV Implementation</h1>
     
     <h2>
-      Geonovum Handreiking<br>
+      Geonovum Algemeen<br>
       Werkversie
       <time class="dt-published" datetime="2023-10-29">29 oktober 2023</time>
     </h2>
@@ -373,77 +339,246 @@ ul.index code{color:inherit}
     </dl>
     
     
-    <p>
-          Dit document is ook beschikbaar in dit niet-normatieve formaat:
-          <a rel="alternate" href="template.pdf">pdf</a>
-        </p>
+    
     <p class="copyright">
           Dit document valt onder de volgende licentie: 
           <a rel="license" href="https://creativecommons.org/licenses/by/4.0/legalcode" class="subfoot"><img class="license" src="https://tools.geostandaarden.nl/respec/style/logos/cc-by.svg" alt="Logo Creative Commons Attribution 4.0 International Public License"><br> Creative Commons Attribution 4.0 International Public License</a>
         </p>
     <hr title="Separator for header">
   </div>
-  <section id="abstract" class="introductory"><h2>Samenvatting</h2><p>TODO: vul in abstract.md een abstract in.</p>
+  <section id="abstract" class="introductory"><h2>Samenvatting</h2><p>We use this repository to document the test scenarios and test results of the</p>
+<p>OGC Features and Geometries JSON - Part 1: Core DRAFT SPECIFICATION
+<a href="https://docs.ogc.org/DRAFTS/21-045.html#_overview">https://docs.ogc.org/DRAFTS/21-045.html#_overview</a></p>
+<p>and its implementation in GDAL GDAL
+3.8.0dev-d054405d9e063595400469128e142bd80bb71923, released 2023/09/16</p>
+<p>as part of the OGC open standards code sprint, London, October 30 - November 1,
+2023
+<a href="https://developer.ogc.org/sprints/22/#:~:text=When%20is%20the%20code%20sprint,be%20held%20on%20October%2C%2012">https://developer.ogc.org/sprints/22/#:~:text=When%20is%20the%20code%20sprint,be%20held%20on%20October%2C%2012</a>.</p>
 </section>
-  <section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#niet-normatieve-deel"><bdi class="secno">1. </bdi>Niet-normatieve deel</a></li><li class="tocline"><a class="tocxref" href="#meer-inhoud"><bdi class="secno">2. </bdi>Meer inhoud</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#definities"><bdi class="secno">2.1 </bdi>Definities</a></li><li class="tocline"><a class="tocxref" href="#afbeeldingen"><bdi class="secno">2.2 </bdi>Afbeeldingen</a></li><li class="tocline"><a class="tocxref" href="#referenties"><bdi class="secno">2.3 </bdi>Referenties</a></li><li class="tocline"><a class="tocxref" href="#optioneel"><bdi class="secno">2.4 </bdi>Optioneel</a></li></ol></li><li class="tocline"><a class="tocxref" href="#mermaid-diagram"><bdi class="secno">3. </bdi>Mermaid diagram</a></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">4. </bdi>Conformiteit</a></li><li class="tocline"><a class="tocxref" href="#tof"><bdi class="secno">5. </bdi>Lijst met figuren</a></li><li class="tocline"><a class="tocxref" href="#index"><bdi class="secno">A. </bdi>Index</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#index-defined-here"><bdi class="secno">A.1 </bdi>Begrippen gedefinieerd door deze specificatie</a></li><li class="tocline"><a class="tocxref" href="#index-defined-elsewhere"><bdi class="secno">A.2 </bdi>Begrippen gedefinieerd door verwijzing</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">B. </bdi>Referenties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normatieve-referenties"><bdi class="secno">B.1 </bdi>Normatieve referenties</a></li></ol></li></ol></nav>
+  <section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#about-json-fg"><bdi class="secno">1. </bdi>About JSON-FG</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#temporal-information"><bdi class="secno">1.1 </bdi>Temporal information</a></li><li class="tocline"><a class="tocxref" href="#additional-geometry-types"><bdi class="secno">1.2 </bdi>Additional geometry types</a></li><li class="tocline"><a class="tocxref" href="#coordinate-reference-systems"><bdi class="secno">1.3 </bdi>Coordinate reference systems</a></li><li class="tocline"><a class="tocxref" href="#feature-types-and-feature-schema"><bdi class="secno">1.4 </bdi>Feature types and feature schema</a></li></ol></li><li class="tocline"><a class="tocxref" href="#test-scenarios"><bdi class="secno">2. </bdi>TEST SCENARIOS</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#n-b-this-is-an-example-spreadsheet-and-does-not-contain-true-test-results-id-case-description-expectation-execution-result-remarks-geom001-prims-polyhedron-crs001-point-in-rd-gdal-writes-gml-point-geometry-in-rd-to-json-fg-place-attribute-gdal-gml-json-fg-ok-gdal-writes-json-fg-place-attribute-to-gml-point-geometry-gdal-json-fg-gml-ok-gdal-tolerates-to-write-json-fg-place-attribute-to-geojson-point-geometry-gdal-json-fg-geojson-not-ok-line-in-rd-polygon"><bdi class="secno">2.1 </bdi></a></li><li class="tocline"><a class="tocxref" href="#draft-specifcation"><bdi class="secno">2.2 </bdi>DRAFT SPECIFCATION</a></li><li class="tocline"><a class="tocxref" href="#gdal-implementation"><bdi class="secno">2.3 </bdi>GDAL IMPLEMENTATION</a></li><li class="tocline"><a class="tocxref" href="#test-execution"><bdi class="secno">2.4 </bdi>TEST EXECUTION</a></li></ol></li><li class="tocline"><a class="tocxref" href="#results"><bdi class="secno">3. </bdi>Results</a></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">4. </bdi>Conformiteit</a></li><li class="tocline"><a class="tocxref" href="#index"><bdi class="secno">A. </bdi>Index</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#index-defined-here"><bdi class="secno">A.1 </bdi>Begrippen gedefinieerd door deze specificatie</a></li><li class="tocline"><a class="tocxref" href="#index-defined-elsewhere"><bdi class="secno">A.2 </bdi>Begrippen gedefinieerd door verwijzing</a></li></ol></li></ol></nav>
 
   
-  <section class="informative" id="niet-normatieve-deel"><div class="header-wrapper"><h2 id="x1-niet-normatieve-deel"><bdi class="secno">1. </bdi>Niet-normatieve deel</h2><a class="self-link" href="#niet-normatieve-deel" aria-label="Permalink for Section 1."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
-<p>Bijvoorbeeld een introductie is niet normatief.</p>
-<div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="3"><span>Noot</span><span class="issue-label">: index</span></div><p class="">
-Dit hoofdstuk is toegevoegd met <code>class="informative"</code> in <code>config.js</code>.
-</p></div></section>
-  <section id="meer-inhoud"><div class="header-wrapper"><h2 id="x2-meer-inhoud"><bdi class="secno">2. </bdi>Meer inhoud</h2><a class="self-link" href="#meer-inhoud" aria-label="Permalink for Section 2."></a></div>
-<section id="definities"><div class="header-wrapper"><h3 id="x2-1-definities"><bdi class="secno">2.1 </bdi>Definities</h3><a class="self-link" href="#definities" aria-label="Permalink for Section 2.1"></a></div>
-<p><dfn id="dfn-definitie" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Definitie</dfn>: Een definitie is een beschrijving van een woord. Een ander woord voor <em>definitie</em> is betekenis of beschrijving.</p>
-</section><section id="afbeeldingen"><div class="header-wrapper"><h3 id="x2-2-afbeeldingen"><bdi class="secno">2.2 </bdi>Afbeeldingen</h3><a class="self-link" href="#afbeeldingen" aria-label="Permalink for Section 2.2"></a></div>
-<p>Afbeeldingen krijgen een nummer en vermelding in de figurenlijst <a href="#tof" data-matched-text="[[[#tof]]]" class="sec-ref"><bdi class="secno">5. </bdi>Lijst met figuren</a>.</p>
-<p>
-      </p><figure id="fig-onderschrift">
-        <img src="media/Bomos_levenscyclus.svg" alt="Tekstueel alternatief voor toegankelijkheid">
-        <figcaption><a class="self-link" href="#fig-onderschrift">Figuur <bdi class="figno">1</bdi></a> <span class="fig-title">Onderschrift</span></figcaption>
-      </figure>
-    <p></p>
-</section><section id="referenties"><div class="header-wrapper"><h3 id="x2-3-referenties"><bdi class="secno">2.3 </bdi>Referenties</h3><a class="self-link" href="#referenties" aria-label="Permalink for Section 2.3"></a></div>
-<p>Referentie uit locale lijst [<cite><a class="bibref" data-link-type="biblio" href="#bib-semver" title="Semantic Versioning 2.0.0">SemVer</a></cite>]. Lijst staat in <code>organisation-config.js</code>. Alleen referenties die in de tekst voorkomen worden getoond.</p>
-<p>We gebruiken een <a href="#dfn-definitie" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-definitie-1">definitie</a> om een woord te omschrijven.</p>
-</section><section id="optioneel"><div class="header-wrapper"><h3 id="x2-4-optioneel"><bdi class="secno">2.4 </bdi>Optioneel</h3><a class="self-link" href="#optioneel" aria-label="Permalink for Section 2.4"></a></div>
-<p>De onderstaande secties (<em>Conformiteit</em> e.d.) zijn optioneel, zie <code>index.html</code>:</p>
-<pre><code aria-busy="false" class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"abstract"</span> <span class="hljs-attr">data-include-format</span>=<span class="hljs-string">"markdown"</span> <span class="hljs-attr">data-include</span>=<span class="hljs-string">"abstract.md"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"sotd"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span><span class="hljs-comment">&lt;!-- Wordt automatisch gevuld --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">data-include-format</span>=<span class="hljs-string">"markdown"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"informative"</span> <span class="hljs-attr">data-include</span>=<span class="hljs-string">"ch01.md"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">data-include-format</span>=<span class="hljs-string">"markdown"</span> <span class="hljs-attr">data-include</span>=<span class="hljs-string">"ch02.md"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-  <span class="hljs-comment">&lt;!-- Hieronder optionele secties. Worden automatisch gevuld --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'conformance'</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'tof'</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"index"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
-</code></pre>
+  <section class="informative" id="about-json-fg"><div class="header-wrapper"><h2 id="x1-about-json-fg"><bdi class="secno">1. </bdi>About JSON-FG</h2><a class="self-link" href="#about-json-fg" aria-label="Permalink for Section 1."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
+<p>OGC Features and Geometries JSON (JSON-FG) is a proposal for extending GeoJSON
+with support for a.o.</p>
+<ol>
+<li><p>Temporal information</p>
+</li>
+<li><p>Additional geometry types</p>
+</li>
+<li><p>Coordinate reference systems (CRS) other than WGS84</p>
+</li>
+<li><p>Metadata about the feature types in a feature collection, using feature
+schemas</p>
+</li>
+</ol>
+<p>We test the JSON-FG draft specification and implementation on these components.</p>
+<section id="temporal-information"><div class="header-wrapper"><h3 id="x1-1-temporal-information"><bdi class="secno">1.1 </bdi>Temporal information</h3><a class="self-link" href="#temporal-information" aria-label="Permalink for Section 1.1"></a></div>
+<p>JSON-FG adds to GeoJSON a standardized method to include temporal aspects for
+feature instances: date, time, and interval.</p>
+</section><section id="additional-geometry-types"><div class="header-wrapper"><h3 id="x1-2-additional-geometry-types"><bdi class="secno">1.2 </bdi>Additional geometry types</h3><a class="self-link" href="#additional-geometry-types" aria-label="Permalink for Section 1.2"></a></div>
+<p>GeoJSON only supports a limited number of geometry types in the
+geometry-attribute: (MULTI)POINT, (MULTI)LINE, (MULTI)POLYGON and
+GEOMETRYCOLLECTION. JSON-FG extends GeoJSON with 3D solid geometry to include
+(MULTI)POLYHEDRON and (MULTI)PRISM in a separate <em>place</em> attribute.</p>
+</section><section id="coordinate-reference-systems"><div class="header-wrapper"><h3 id="x1-3-coordinate-reference-systems"><bdi class="secno">1.3 </bdi>Coordinate reference systems</h3><a class="self-link" href="#coordinate-reference-systems" aria-label="Permalink for Section 1.3"></a></div>
+<p>GeoJSON formally allows only geometry in the WGS'84 CRS to be included in the
+<em>geometry</em> attribute. JSON-FG makes it possible to include geometry in other CRS
+in a separate <em>place</em> attribute.</p>
+</section><section id="feature-types-and-feature-schema"><div class="header-wrapper"><h3 id="x1-4-feature-types-and-feature-schema"><bdi class="secno">1.4 </bdi>Feature types and feature schema</h3><a class="self-link" href="#feature-types-and-feature-schema" aria-label="Permalink for Section 1.4"></a></div>
+<p>JSON-FG describes how to add knowledge about the feature type in a feature
+collection, both homogeneous and heterogeneous in terms of the feature types,
+using for example feature schemas.</p>
 </section></section>
-  <section id="mermaid-diagram"><div class="header-wrapper"><h2 id="x3-mermaid-diagram"><bdi class="secno">3. </bdi>Mermaid diagram</h2><a class="self-link" href="#mermaid-diagram" aria-label="Permalink for Section 3."></a></div>
-<figure id="Mermaidvoorbeeld">
-
-<pre><svg id="diagram-1" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="max-width: 128.234375px;" viewBox="0 0 128.234375 248"><style>
-#diagram-1 {font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}#diagram-1 .error-icon{fill:#552222;}#diagram-1 .error-text{fill:#552222;stroke:#552222;}#diagram-1 .edge-thickness-normal{stroke-width:2px;}#diagram-1 .edge-thickness-thick{stroke-width:3.5px;}#diagram-1 .edge-pattern-solid{stroke-dasharray:0;}#diagram-1 .edge-pattern-dashed{stroke-dasharray:3;}#diagram-1 .edge-pattern-dotted{stroke-dasharray:2;}#diagram-1 .marker{fill:#333333;stroke:#333333;}#diagram-1 .marker.cross{stroke:#333333;}#diagram-1 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#diagram-1 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#333;}#diagram-1 .cluster-label text{fill:#333;}#diagram-1 .cluster-label span{color:#333;}#diagram-1 .label text,#diagram-1 span{fill:#333;color:#333;}#diagram-1 .node rect,#diagram-1 .node circle,#diagram-1 .node ellipse,#diagram-1 .node polygon,#diagram-1 .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#diagram-1 .node .label{text-align:center;}#diagram-1 .node.clickable{cursor:pointer;}#diagram-1 .arrowheadPath{fill:#333333;}#diagram-1 .edgePath .path{stroke:#333333;stroke-width:2.0px;}#diagram-1 .flowchart-link{stroke:#333333;fill:none;}#diagram-1 .edgeLabel{background-color:#e8e8e8;text-align:center;}#diagram-1 .edgeLabel rect{opacity:0.5;background-color:#e8e8e8;fill:#e8e8e8;}#diagram-1 .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#diagram-1 .cluster text{fill:#333;}#diagram-1 .cluster span{color:#333;}#diagram-1 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#diagram-1 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}
-</style><g><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath LS-A LE-B" id="L-A-B" style="opacity: 1;"><path class="path" d="M48.55859375,47.77154964846383L44.354817708333336,52.64295804038653C40.151041666666664,57.514366432309224,31.743489583333332,67.25718321615462,27.539713541666668,76.29525827474397C23.3359375,85.33333333333333,23.3359375,93.66666666666667,23.3359375,97.83333333333333L23.3359375,102" marker-end="url(#arrowhead31)" style="fill:none"></path><defs><marker id="arrowhead31" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-A LE-C" id="L-A-C" style="opacity: 1;"><path class="path" d="M79.23046875,47.77154964846383L83.43424479166667,52.64295804038653C87.63802083333333,57.514366432309224,96.04557291666667,67.25718321615462,100.24934895833333,76.29525827474397C104.453125,85.33333333333333,104.453125,93.66666666666667,104.453125,97.83333333333333L104.453125,102" marker-end="url(#arrowhead32)" style="fill:none"></path><defs><marker id="arrowhead32" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-B LE-D" id="L-B-D" style="opacity: 1;"><path class="path" d="M23.3359375,146L23.3359375,150.16666666666666C23.3359375,154.33333333333334,23.3359375,162.66666666666666,27.465494791666668,171.6187357539568C31.595052083333332,180.57080484124694,39.854166666666664,190.14160968249382,43.983723958333336,194.92701210311728L48.11328125,199.71241452374073" marker-end="url(#arrowhead33)" style="fill:none"></path><defs><marker id="arrowhead33" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-C LE-D" id="L-C-D" style="opacity: 1;"><path class="path" d="M104.453125,146L104.453125,150.16666666666666C104.453125,154.33333333333334,104.453125,162.66666666666666,100.32356770833333,171.6187357539568C96.19401041666667,180.57080484124694,87.93489583333333,190.14160968249382,83.80533854166667,194.92701210311728L79.67578125,199.71241452374073" marker-end="url(#arrowhead34)" style="fill:none"></path><defs><marker id="arrowhead34" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0"></rect><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-A-B" class="edgeLabel L-LS-A' L-LE-B"></span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0"></rect><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-A-C" class="edgeLabel L-LS-A' L-LE-C"></span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0"></rect><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-B-D" class="edgeLabel L-LS-B' L-LE-D"></span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0"></rect><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-C-D" class="edgeLabel L-LS-C' L-LE-D"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node default" id="flowchart-A-24" transform="translate(63.89453125,30)" style="opacity: 1;"><rect rx="0" ry="0" x="-15.3359375" y="-22" width="30.671875" height="44" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-5.3359375,-12)"><foreignObject width="10.671875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">A</div></foreignObject></g></g></g><g class="node default" id="flowchart-B-25" transform="translate(23.3359375,124)" style="opacity: 1;"><rect rx="0" ry="0" x="-15.3359375" y="-22" width="30.671875" height="44" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-5.3359375,-12)"><foreignObject width="10.671875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">B</div></foreignObject></g></g></g><g class="node default" id="flowchart-C-27" transform="translate(104.453125,124)" style="opacity: 1;"><rect rx="0" ry="0" x="-15.78125" y="-22" width="31.5625" height="44" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-5.78125,-12)"><foreignObject width="11.5625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">C</div></foreignObject></g></g></g><g class="node default" id="flowchart-D-29" transform="translate(63.89453125,218)" style="opacity: 1;"><rect rx="0" ry="0" x="-15.78125" y="-22" width="31.5625" height="44" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-5.78125,-12)"><foreignObject width="11.5625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">D</div></foreignObject></g></g></g></g></g></g></svg></pre>
-<figcaption><a class="self-link" href="#Mermaidvoorbeeld">Figuur <bdi class="figno">2</bdi></a> <span class="fig-title">Mermaid voorbeeld</span></figcaption>
-</figure></section>
+  <section class="informative" id="test-scenarios"><div class="header-wrapper"><h2 id="x2-test-scenarios"><bdi class="secno">2. </bdi>TEST SCENARIOS</h2><a class="self-link" href="#test-scenarios" aria-label="Permalink for Section 2."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
+<p>TODO: collect test cases, resultats etc in Excel spreadsheet.</p>
+<p>For example:</p>
+<section id="n-b-this-is-an-example-spreadsheet-and-does-not-contain-true-test-results-id-case-description-expectation-execution-result-remarks-geom001-prims-polyhedron-crs001-point-in-rd-gdal-writes-gml-point-geometry-in-rd-to-json-fg-place-attribute-gdal-gml-json-fg-ok-gdal-writes-json-fg-place-attribute-to-gml-point-geometry-gdal-json-fg-gml-ok-gdal-tolerates-to-write-json-fg-place-attribute-to-geojson-point-geometry-gdal-json-fg-geojson-not-ok-line-in-rd-polygon"><div class="header-wrapper"><h3 id="x2-1"><bdi class="secno">2.1 </bdi></h3><a class="self-link" href="#n-b-this-is-an-example-spreadsheet-and-does-not-contain-true-test-results-id-case-description-expectation-execution-result-remarks-geom001-prims-polyhedron-crs001-point-in-rd-gdal-writes-gml-point-geometry-in-rd-to-json-fg-place-attribute-gdal-gml-json-fg-ok-gdal-writes-json-fg-place-attribute-to-gml-point-geometry-gdal-json-fg-gml-ok-gdal-tolerates-to-write-json-fg-place-attribute-to-geojson-point-geometry-gdal-json-fg-geojson-not-ok-line-in-rd-polygon" aria-label="Permalink for Section 2.1"></a></div>
+<p>N.B. THIS IS AN EXAMPLE SPREADSHEET AND DOES NOT CONTAIN TRUE TEST RESULTS.</p>
+<table class="simple">
+<thead>
+<tr>
+<th>#ID</th>
+<th>Case description</th>
+<th>Expectation</th>
+<th>Execution</th>
+<th>Result</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>GEOM001</td>
+<td>Prims</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Polyhedron</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CRS001</td>
+<td>Point in RD</td>
+<td>GDAL writes GML point geometry in RD to JSON-FG place attribute</td>
+<td>GDAL:: GML &gt; JSON-FG</td>
+<td>OK</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>GDAL writes JSON-FG place attribute to GML point geometry</td>
+<td>GDAL:: JSON-FG &gt; GML</td>
+<td>OK</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>GDAL <em>tolerates</em> to write JSON-FG place attribute to GeoJSON point geometry</td>
+<td>GDAL :: JSON-FG &gt; GeoJSON</td>
+<td>NOT OK</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Line in RD</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Polygon</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+</section><section id="draft-specifcation"><div class="header-wrapper"><h3 id="x2-2-draft-specifcation"><bdi class="secno">2.2 </bdi>DRAFT SPECIFCATION</h3><a class="self-link" href="#draft-specifcation" aria-label="Permalink for Section 2.2"></a></div>
+<ul>
+<li><p>Geometry:</p>
+<ul>
+<li><p>(Multi)Point, (Multi)Line, Multi(Polygon), GeometryCollection in <em>place</em>
+attribute</p>
+</li>
+<li><p>(Multi)Polyhedron and (Multi)Prism in <em>place</em> attribute</p>
+</li>
+</ul>
+</li>
+<li><p>CRS:</p>
+<ul>
+<li><p>Types:</p>
+<ul>
+<li><p>WGS'84 (in geometry and place attribute)</p>
+</li>
+<li><p>RD: 28992</p>
+</li>
+<li><p>ETRS89: 4258</p>
+</li>
+<li><p>3857?</p>
+</li>
+<li><p>900913?</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Temporal:</p>
+<ul>
+<li><p>CreationDate</p>
+</li>
+<li><p>tijdstipregistratie</p>
+</li>
+<li><p>Tijdlijn geldigheid vs. tijdlijn registratie</p>
+</li>
+</ul>
+</li>
+<li><p>Feature metadata</p>
+<ul>
+<li><p>?? Feature schema: JSON schema of BGT?</p>
+<ul>
+<li>Combine two datasets of BAG and BGT in 1 dataset?</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section><section id="gdal-implementation"><div class="header-wrapper"><h3 id="x2-3-gdal-implementation"><bdi class="secno">2.3 </bdi>GDAL IMPLEMENTATION</h3><a class="self-link" href="#gdal-implementation" aria-label="Permalink for Section 2.3"></a></div>
+<ul>
+<li><p>Formats JSON-FG &lt;&gt;:</p>
+<ul>
+<li><p>GML</p>
+<ul>
+<li><p>GeoJSON</p>
+<ul>
+<li><p>PostgreSQL</p>
+</li>
+<li><p>OpenFileGeodatabase (ESRI)</p>
+</li>
+<li><p>Esri Shapefile</p>
+</li>
+</ul>
+</li>
+<li><p>CRS:</p>
+<ul>
+<li><p>Syntax/Format:</p>
+<ul>
+<li><p>URI: "<a href="http://www.opengis.net/def/crs/EPSG/0/28992">http://www.opengis.net/def/crs/EPSG/0/28992</a>"</p>
+<p>SAFE CURIE: "[EPSG: 3857]"</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Others:</p>
+<ul>
+<li><p>Arcs?</p>
+</li>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section><section id="test-execution"><div class="header-wrapper"><h3 id="x2-4-test-execution"><bdi class="secno">2.4 </bdi>TEST EXECUTION</h3><a class="self-link" href="#test-execution" aria-label="Permalink for Section 2.4"></a></div>
+<ul>
+<li><p>Datasets:</p>
+<ul>
+<li><p>BGT GML (2D RD, and includes ARCs)</p>
+<ul>
+<li><p>BAG 3D Geopackage (Polyhedrons)</p>
+</li>
+<li><p>BAG extruded polygons (Prims)</p>
+</li>
+<li><p>Bestuurlijke gebieden (temporal aspects)</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section></section>
+  <section class="informative" id="results"><div class="header-wrapper"><h2 id="x3-results"><bdi class="secno">3. </bdi>Results</h2><a class="self-link" href="#results" aria-label="Permalink for Section 3."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
+</section>
+  
 
   <section id="conformance"><div class="header-wrapper"><h2 id="x4-conformiteit"><bdi class="secno">4. </bdi>Conformiteit</h2><a class="self-link" href="#conformance" aria-label="Permalink for Section 4."></a></div><p>Naast onderdelen die als niet normatief gemarkeerd zijn, zijn ook alle diagrammen, voorbeelden, en noten in dit document niet normatief. Verder is alles in dit document normatief.</p></section>
-  <section id="tof"><div class="header-wrapper"><h2 id="x5-lijst-met-figuren"><bdi class="secno">5. </bdi>Lijst met figuren</h2><a class="self-link" href="#tof" aria-label="Permalink for Section 5."></a></div><ul class="tof">
-        <li class="tofline">
-    <a class="tocxref" href="#fig-onderschrift"><span class="self-link">Figuur <bdi class="figno">1</bdi></span> <span class="fig-title">Onderschrift</span></a>
-  </li><li class="tofline">
-    <a class="tocxref" href="#Mermaidvoorbeeld"><span class="self-link">Figuur <bdi class="figno">2</bdi></span> <span class="fig-title">Mermaid voorbeeld</span></a>
-  </li>
-      </ul></section>
+  <section id="tof"></section>
   <section id="index" class="appendix"><div class="header-wrapper"><h2 id="a-index"><bdi class="secno">A. </bdi>Index</h2><a class="self-link" href="#index" aria-label="Permalink for Appendix A."></a></div><section id="index-defined-here">
     <div class="header-wrapper"><h3 id="a-1-begrippen-gedefinieerd-door-deze-specificatie"><bdi class="secno">A.1 </bdi>Begrippen gedefinieerd door deze specificatie</h3><a class="self-link" href="#index-defined-here" aria-label="Permalink for Appendix A.1"></a></div>
     <ul class="index">
-    <li>
-      <a class="index-term" href="#dfn-definitie">Definitie</a> 
-    <span class="print-only">§2.1</span></li>
+    
   </ul>
   </section><section id="index-defined-elsewhere">
     <div class="header-wrapper"><h3 id="a-2-begrippen-gedefinieerd-door-verwijzing"><bdi class="secno">A.2 </bdi>Begrippen gedefinieerd door verwijzing</h3><a class="self-link" href="#index-defined-elsewhere" aria-label="Permalink for Appendix A.2"></a></div>
@@ -454,26 +589,9 @@ Dit hoofdstuk is toegevoegd met <code>class="informative"</code> in <code>config
 
 
 
-<section id="references" class="appendix"><div class="header-wrapper"><h2 id="b-referenties"><bdi class="secno">B. </bdi>Referenties</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix B."></a></div><section id="normatieve-referenties">
-    <div class="header-wrapper"><h3 id="b-1-normatieve-referenties"><bdi class="secno">B.1 </bdi>Normatieve referenties</h3><a class="self-link" href="#normatieve-referenties" aria-label="Permalink for Appendix B.1"></a></div>
-    <dl class="bibliography"><dt id="bib-semver">[SemVer]</dt><dd>
-      <a href="https://semver.org"><cite>Semantic Versioning 2.0.0</cite></a>. T. Preston-Werner. June 2013. URL: <a href="https://semver.org">https://semver.org</a>
-    </dd></dl>
-  </section></section><p role="navigation" id="back-to-top">
+<p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
-  </p><div class="mermaidTooltip" style="opacity: 0;"></div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-definitie" aria-label="Links in this document to definition: Definitie">
-      <span class="caret"></span>
-      <div>
-        <a class="self-link" href="#dfn-definitie" aria-label="Permalink for definition: Definitie. Activate to close this dialog.">Permalink</a>
-         
-      </div>
-      <p><b>Referenced in:</b></p>
-      <ul>
-    <li>
-    <a href="#ref-for-dfn-definitie-1" title="§ 2.3 Referenties">§ 2.3 Referenties</a> 
-  </li>
-  </ul>
-    </div><script id="respec-dfn-panel">(() => {
+  </p><script id="respec-dfn-panel">(() => {
 // @ts-check
 if (document.respec) {
   document.respec.ready.then(setupPanel);
@@ -695,4 +813,4 @@ function hidePanel(panel) {
   panel.hidden = true;
   panel.classList.remove("docked");
 }
-})()</script><div class="sidelabel">Geonovum Handreiking - Werkversie</div><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body></html>
+})()</script><div class="sidelabel">Geonovum Algemeen - Werkversie</div><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body></html>
