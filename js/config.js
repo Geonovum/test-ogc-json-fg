@@ -61,7 +61,7 @@ let respecConfig = {
       }
     ],
   //neem hier de URL van de github repository op waar het respec document in staat
-  github: "https://github.com/Geonovum/NL-ReSpec-GN-template",
+  github: "https://github.com/Geonovum/test-ogc-json-fg",
   // Create PDF and link to file in header (optional):
   //alternateFormats: [
    //   {
