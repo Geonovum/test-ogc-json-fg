@@ -1,4 +1,4 @@
-# OGC JSON Features and Geometries Test
+# Test OGC Features and Geometries JSON
 We use this repository to document the test scenarios and test results of the 
 
 OGC Features and Geometries JSON - Part 1: Core DRAFT SPECIFICATION
