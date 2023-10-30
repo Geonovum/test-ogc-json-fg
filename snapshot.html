@@ -115,6 +115,20 @@ ul.index code{color:inherit}
 </style>
 <meta name="description" content="We use this repository to document the test scenarios and test results of the">
 <style>
+.hljs{display:block;overflow-x:auto;padding:.5em;color:#383a42;background:#fafafa}
+.hljs-comment,.hljs-quote{color:#717277;font-style:italic}
+.hljs-doctag,.hljs-formula,.hljs-keyword{color:#a626a4}
+.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#ca4706;font-weight:700}
+.hljs-literal{color:#0b76c5}
+.hljs-addition,.hljs-attribute,.hljs-meta-string,.hljs-regexp,.hljs-string{color:#42803c}
+.hljs-built_in,.hljs-class .hljs-title{color:#9a6a01}
+.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#986801}
+.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#336ae3}
+.hljs-emphasis{font-style:italic}
+.hljs-strong{font-weight:700}
+.hljs-link{text-decoration:underline}
+</style>
+<style>
 
   .sidelabel {
     position: fixed;
@@ -391,6 +405,27 @@ collection, both homogeneous and heterogeneous in terms of the feature types,
 using for example feature schemas.</p>
 </section></section>
   <section class="informative" id="about-the-gdal-implementation-of-json-fg"><div class="header-wrapper"><h2 id="x2-about-the-gdal-implementation-of-json-fg"><bdi class="secno">2. </bdi>About the GDAL implementation of JSON-FG</h2><a class="self-link" href="#about-the-gdal-implementation-of-json-fg" aria-label="Permalink for Section 2."></a></div><p><em>This section is non-normative.</em></p>
+<p>At the time of testing, the JSON-FG driver is not yet part of a release but is merged into GDAL master. </p>
+<p>It can be for example tested using the -latest docker images mentioned at <a href="https://github.com/OSGeo/gdal/tree/master/docker">https://github.com/OSGeo/gdal/tree/master/docker</a></p>
+<p>e.g</p>
+<pre aria-busy="false"><code class="hljs javascript">$ docker run --rm -it ghcr.io/osgeo/gdal:alpine-small-latest ogrinfo --format jsonfg
+Format Details:
+  Short Name: JSONFG
+  Long Name: OGC Features and Geometries <span class="hljs-built_in">JSON</span>
+  <span class="hljs-attr">Supports</span>: Vector
+  <span class="hljs-attr">Extension</span>: json
+  Help Topic: drivers/vector/jsonfg.html</code></pre>
+
+<p>Or using Conda and the gdal-master channel. Instructions at <a href="https://gdal.org/download.html#gdal-master-conda-builds">https://gdal.org/download.html#gdal-master-conda-builds</a></p>
+<p>We use the first method. </p>
+<p>Documentation of the GDAL JSON-FG driver is here: <a href="https://gdal.org/drivers/vector/jsonfg.html">https://gdal.org/drivers/vector/jsonfg.html</a></p>
+<p>GDAL implements the following features of JSON-FG: </p>
+<ul>
+<li>capturing the feature type in a featureType element to affect features to separate</li>
+<li>capturing a coordinate reference system (not necessarily WGS 84) in a coordRefSys element, that is the one used by geometries written in the place element</li>
+<li>time element at Feature level</li>
+<li>minimum support for Polyhedron geometries (with a single outer shell) and Prism with Point, LineString or Polygon base.</li>
+</ul>
 </section>
   <section class="informative" id="test-scenarios"><div class="header-wrapper"><h2 id="x3-test-scenarios"><bdi class="secno">3. </bdi>Test scenarios</h2><a class="self-link" href="#test-scenarios" aria-label="Permalink for Section 3."></a></div><p><em>This section is non-normative.</em></p>
 <p>TODO: collect test cases, resultats etc in Excel spreadsheet.</p>
