@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="nl"><head>
+<!DOCTYPE html><html lang="en"><head>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta content="text/html; charset=utf-8" http-equiv="content-type">
 <meta name="generator" content="ReSpec 34.1.4">
@@ -114,6 +114,20 @@ ul.index code{color:inherit}
 }
 </style>
 <meta name="description" content="We use this repository to document the test scenarios and test results of the">
+<style>
+.hljs{display:block;overflow-x:auto;padding:.5em;color:#383a42;background:#fafafa}
+.hljs-comment,.hljs-quote{color:#717277;font-style:italic}
+.hljs-doctag,.hljs-formula,.hljs-keyword{color:#a626a4}
+.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#ca4706;font-weight:700}
+.hljs-literal{color:#0b76c5}
+.hljs-addition,.hljs-attribute,.hljs-meta-string,.hljs-regexp,.hljs-string{color:#42803c}
+.hljs-built_in,.hljs-class .hljs-title{color:#9a6a01}
+.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#986801}
+.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#336ae3}
+.hljs-emphasis{font-style:italic}
+.hljs-strong{font-weight:700}
+.hljs-link{text-decoration:underline}
+</style>
 <style>
 
   .sidelabel {
@@ -297,7 +311,7 @@ ul.index code{color:inherit}
       "companyURL": "https://www.geonovum.nl"
     }
   ],
-  "github": "https://github.com/Geonovum/NL-ReSpec-GN-template"
+  "github": "https://github.com/Geonovum/test-ogc-json-fg"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/base.css"></head>
 
@@ -306,47 +320,47 @@ ul.index code{color:inherit}
   </a> <h1 id="title" class="title">Testing OGC JSON-FG Draft Specification and its GDAL-DEV Implementation</h1>
     
     <h2>
-      Geonovum Algemeen<br>
-      Werkversie
-      <time class="dt-published" datetime="2023-10-29">29 oktober 2023</time>
+      Geonovum General<br>
+      Editor's draft
+      <time class="dt-published" datetime="2023-10-30">October 30, 2023</time>
     </h2>
     <dl>
       
       
-      <dt>Laatste werkversie:</dt><dd><a href="https://geonovum.github.io/NL-ReSpec-GN-template/">https://geonovum.github.io/NL-ReSpec-GN-template/</a></dd>
+      <dt>Latest editor's draft:</dt><dd><a href="https://geonovum.github.io/test-ogc-json-fg/">https://geonovum.github.io/test-ogc-json-fg/</a></dd>
       
       
       
       
       
-      <dt>Redacteur:</dt>
+      <dt>Editor:</dt>
       <dd class="editor p-author h-card vcard">
     <span class="p-name fn">voornaam achternaam</span> (<a class="p-org org h-org" href="https://www.geonovum.nl">Geonovum</a>)
   </dd>
       
-      <dt>Auteur:</dt><dd class="editor p-author h-card vcard">
+      <dt>Author:</dt><dd class="editor p-author h-card vcard">
     <span class="p-name fn">voornaam achternaam</span> (<a class="p-org org h-org" href="https://www.geonovum.nl">Geonovum</a>)
   </dd>
-      <dt>Doe mee:</dt><dd>
-    <a href="https://github.com/Geonovum/NL-ReSpec-GN-template/">GitHub Geonovum/NL-ReSpec-GN-template</a>
+      <dt>Participate:</dt><dd>
+    <a href="https://github.com/Geonovum/test-ogc-json-fg/">GitHub Geonovum/test-ogc-json-fg</a>
   </dd><dd>
-    <a href="https://github.com/Geonovum/NL-ReSpec-GN-template/issues/">Dien een melding in</a>
+    <a href="https://github.com/Geonovum/test-ogc-json-fg/issues/">File an issue</a>
   </dd><dd>
-    <a href="https://github.com/Geonovum/NL-ReSpec-GN-template/commits/">Revisiehistorie</a>
+    <a href="https://github.com/Geonovum/test-ogc-json-fg/commits/">Commit history</a>
   </dd><dd>
-    <a href="https://github.com/Geonovum/NL-ReSpec-GN-template/pulls/">Pull requests</a>
+    <a href="https://github.com/Geonovum/test-ogc-json-fg/pulls/">Pull requests</a>
   </dd>
     </dl>
     
     
     
     <p class="copyright">
-          Dit document valt onder de volgende licentie: 
+          This document is licensed under 
           <a rel="license" href="https://creativecommons.org/licenses/by/4.0/legalcode" class="subfoot"><img class="license" src="https://tools.geostandaarden.nl/respec/style/logos/cc-by.svg" alt="Logo Creative Commons Attribution 4.0 International Public License"><br> Creative Commons Attribution 4.0 International Public License</a>
         </p>
     <hr title="Separator for header">
   </div>
-  <section id="abstract" class="introductory"><h2>Samenvatting</h2><p>We use this repository to document the test scenarios and test results of the</p>
+  <section id="abstract" class="introductory"><h2>Abstract</h2><p>We use this repository to document the test scenarios and test results of the</p>
 <p>OGC Features and Geometries JSON - Part 1: Core DRAFT SPECIFICATION
 <a href="https://docs.ogc.org/DRAFTS/21-045.html#_overview">https://docs.ogc.org/DRAFTS/21-045.html#_overview</a></p>
 <p>and its implementation in GDAL GDAL
@@ -355,10 +369,10 @@ ul.index code{color:inherit}
 2023
 <a href="https://developer.ogc.org/sprints/22/#:~:text=When%20is%20the%20code%20sprint,be%20held%20on%20October%2C%2012">https://developer.ogc.org/sprints/22/#:~:text=When%20is%20the%20code%20sprint,be%20held%20on%20October%2C%2012</a>.</p>
 </section>
-  <section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#about-json-fg"><bdi class="secno">1. </bdi>About JSON-FG</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#temporal-information"><bdi class="secno">1.1 </bdi>Temporal information</a></li><li class="tocline"><a class="tocxref" href="#additional-geometry-types"><bdi class="secno">1.2 </bdi>Additional geometry types</a></li><li class="tocline"><a class="tocxref" href="#coordinate-reference-systems"><bdi class="secno">1.3 </bdi>Coordinate reference systems</a></li><li class="tocline"><a class="tocxref" href="#feature-types-and-feature-schema"><bdi class="secno">1.4 </bdi>Feature types and feature schema</a></li></ol></li><li class="tocline"><a class="tocxref" href="#test-scenarios"><bdi class="secno">2. </bdi>TEST SCENARIOS</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#n-b-this-is-an-example-spreadsheet-and-does-not-contain-true-test-results-id-case-description-expectation-execution-result-remarks-geom001-prims-polyhedron-crs001-point-in-rd-gdal-writes-gml-point-geometry-in-rd-to-json-fg-place-attribute-gdal-gml-json-fg-ok-gdal-writes-json-fg-place-attribute-to-gml-point-geometry-gdal-json-fg-gml-ok-gdal-tolerates-to-write-json-fg-place-attribute-to-geojson-point-geometry-gdal-json-fg-geojson-not-ok-line-in-rd-polygon"><bdi class="secno">2.1 </bdi></a></li><li class="tocline"><a class="tocxref" href="#draft-specifcation"><bdi class="secno">2.2 </bdi>DRAFT SPECIFCATION</a></li><li class="tocline"><a class="tocxref" href="#gdal-implementation"><bdi class="secno">2.3 </bdi>GDAL IMPLEMENTATION</a></li><li class="tocline"><a class="tocxref" href="#test-execution"><bdi class="secno">2.4 </bdi>TEST EXECUTION</a></li></ol></li><li class="tocline"><a class="tocxref" href="#results"><bdi class="secno">3. </bdi>Results</a></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">4. </bdi>Conformiteit</a></li><li class="tocline"><a class="tocxref" href="#index"><bdi class="secno">A. </bdi>Index</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#index-defined-here"><bdi class="secno">A.1 </bdi>Begrippen gedefinieerd door deze specificatie</a></li><li class="tocline"><a class="tocxref" href="#index-defined-elsewhere"><bdi class="secno">A.2 </bdi>Begrippen gedefinieerd door verwijzing</a></li></ol></li></ol></nav>
+  <section id="sotd" class="introductory"><h2>Status of this document</h2><p>This is a working draft that can be changed, removed or replaced by other documents at any time. It is not a stable document.</p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of this document</a></li><li class="tocline"><a class="tocxref" href="#about-json-fg"><bdi class="secno">1. </bdi>About JSON-FG</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#temporal-information"><bdi class="secno">1.1 </bdi>Temporal information</a></li><li class="tocline"><a class="tocxref" href="#additional-geometry-types"><bdi class="secno">1.2 </bdi>Additional geometry types</a></li><li class="tocline"><a class="tocxref" href="#coordinate-reference-systems"><bdi class="secno">1.3 </bdi>Coordinate reference systems</a></li><li class="tocline"><a class="tocxref" href="#feature-types-and-feature-schema"><bdi class="secno">1.4 </bdi>Feature types and feature schema</a></li></ol></li><li class="tocline"><a class="tocxref" href="#about-the-gdal-implementation-of-json-fg"><bdi class="secno">2. </bdi>About the GDAL implementation of JSON-FG</a></li><li class="tocline"><a class="tocxref" href="#test-scenarios"><bdi class="secno">3. </bdi>Test scenarios</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#draft-specification"><bdi class="secno">3.1 </bdi>Draft specification</a></li><li class="tocline"><a class="tocxref" href="#gdal-dev-implementation"><bdi class="secno">3.2 </bdi>GDAL-dev implementation</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#formats-json-fg"><bdi class="secno">3.2.1 </bdi>Formats JSON-FG &lt;&gt;:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#test-execution"><bdi class="secno">3.3 </bdi>Test execution</a></li></ol></li><li class="tocline"><a class="tocxref" href="#results"><bdi class="secno">4. </bdi>Results</a></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">5. </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#index"><bdi class="secno">A. </bdi>Index</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#index-defined-here"><bdi class="secno">A.1 </bdi>Terms defined by this specification</a></li><li class="tocline"><a class="tocxref" href="#index-defined-elsewhere"><bdi class="secno">A.2 </bdi>Terms defined by reference</a></li></ol></li></ol></nav>
 
   
-  <section class="informative" id="about-json-fg"><div class="header-wrapper"><h2 id="x1-about-json-fg"><bdi class="secno">1. </bdi>About JSON-FG</h2><a class="self-link" href="#about-json-fg" aria-label="Permalink for Section 1."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
+  <section class="informative" id="about-json-fg"><div class="header-wrapper"><h2 id="x1-about-json-fg"><bdi class="secno">1. </bdi>About JSON-FG</h2><a class="self-link" href="#about-json-fg" aria-label="Permalink for Section 1."></a></div><p><em>This section is non-normative.</em></p>
 <p>OGC Features and Geometries JSON (JSON-FG) is a proposal for extending GeoJSON
 with support for a.o.</p>
 <ol>
@@ -390,10 +404,32 @@ in a separate <em>place</em> attribute.</p>
 collection, both homogeneous and heterogeneous in terms of the feature types,
 using for example feature schemas.</p>
 </section></section>
-  <section class="informative" id="test-scenarios"><div class="header-wrapper"><h2 id="x2-test-scenarios"><bdi class="secno">2. </bdi>TEST SCENARIOS</h2><a class="self-link" href="#test-scenarios" aria-label="Permalink for Section 2."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
+  <section class="informative" id="about-the-gdal-implementation-of-json-fg"><div class="header-wrapper"><h2 id="x2-about-the-gdal-implementation-of-json-fg"><bdi class="secno">2. </bdi>About the GDAL implementation of JSON-FG</h2><a class="self-link" href="#about-the-gdal-implementation-of-json-fg" aria-label="Permalink for Section 2."></a></div><p><em>This section is non-normative.</em></p>
+<p>At the time of testing, the JSON-FG driver is not yet part of a release but is merged into GDAL master. </p>
+<p>It can be for example tested using the -latest docker images mentioned at <a href="https://github.com/OSGeo/gdal/tree/master/docker">https://github.com/OSGeo/gdal/tree/master/docker</a></p>
+<p>e.g</p>
+<pre aria-busy="false"><code class="hljs javascript">$ docker run --rm -it ghcr.io/osgeo/gdal:alpine-small-latest ogrinfo --format jsonfg
+Format Details:
+  Short Name: JSONFG
+  Long Name: OGC Features and Geometries <span class="hljs-built_in">JSON</span>
+  <span class="hljs-attr">Supports</span>: Vector
+  <span class="hljs-attr">Extension</span>: json
+  Help Topic: drivers/vector/jsonfg.html</code></pre>
+
+<p>Or using Conda and the gdal-master channel. Instructions at <a href="https://gdal.org/download.html#gdal-master-conda-builds">https://gdal.org/download.html#gdal-master-conda-builds</a></p>
+<p>We use the first method. </p>
+<p>Documentation of the GDAL JSON-FG driver is here: <a href="https://gdal.org/drivers/vector/jsonfg.html">https://gdal.org/drivers/vector/jsonfg.html</a></p>
+<p>GDAL implements the following features of JSON-FG: </p>
+<ul>
+<li>capturing the feature type in a featureType element to affect features to separate</li>
+<li>capturing a coordinate reference system (not necessarily WGS 84) in a coordRefSys element, that is the one used by geometries written in the place element</li>
+<li>time element at Feature level</li>
+<li>minimum support for Polyhedron geometries (with a single outer shell) and Prism with Point, LineString or Polygon base.</li>
+</ul>
+</section>
+  <section class="informative" id="test-scenarios"><div class="header-wrapper"><h2 id="x3-test-scenarios"><bdi class="secno">3. </bdi>Test scenarios</h2><a class="self-link" href="#test-scenarios" aria-label="Permalink for Section 3."></a></div><p><em>This section is non-normative.</em></p>
 <p>TODO: collect test cases, resultats etc in Excel spreadsheet.</p>
 <p>For example:</p>
-<section id="n-b-this-is-an-example-spreadsheet-and-does-not-contain-true-test-results-id-case-description-expectation-execution-result-remarks-geom001-prims-polyhedron-crs001-point-in-rd-gdal-writes-gml-point-geometry-in-rd-to-json-fg-place-attribute-gdal-gml-json-fg-ok-gdal-writes-json-fg-place-attribute-to-gml-point-geometry-gdal-json-fg-gml-ok-gdal-tolerates-to-write-json-fg-place-attribute-to-geojson-point-geometry-gdal-json-fg-geojson-not-ok-line-in-rd-polygon"><div class="header-wrapper"><h3 id="x2-1"><bdi class="secno">2.1 </bdi></h3><a class="self-link" href="#n-b-this-is-an-example-spreadsheet-and-does-not-contain-true-test-results-id-case-description-expectation-execution-result-remarks-geom001-prims-polyhedron-crs001-point-in-rd-gdal-writes-gml-point-geometry-in-rd-to-json-fg-place-attribute-gdal-gml-json-fg-ok-gdal-writes-json-fg-place-attribute-to-gml-point-geometry-gdal-json-fg-gml-ok-gdal-tolerates-to-write-json-fg-place-attribute-to-geojson-point-geometry-gdal-json-fg-geojson-not-ok-line-in-rd-polygon" aria-label="Permalink for Section 2.1"></a></div>
 <p>N.B. THIS IS AN EXAMPLE SPREADSHEET AND DOES NOT CONTAIN TRUE TEST RESULTS.</p>
 <table class="simple">
 <thead>
@@ -463,7 +499,7 @@ using for example feature schemas.</p>
 <td></td>
 </tr>
 </tbody></table>
-</section><section id="draft-specifcation"><div class="header-wrapper"><h3 id="x2-2-draft-specifcation"><bdi class="secno">2.2 </bdi>DRAFT SPECIFCATION</h3><a class="self-link" href="#draft-specifcation" aria-label="Permalink for Section 2.2"></a></div>
+<section id="draft-specification"><div class="header-wrapper"><h3 id="x3-1-draft-specification"><bdi class="secno">3.1 </bdi>Draft specification</h3><a class="self-link" href="#draft-specification" aria-label="Permalink for Section 3.1"></a></div>
 <ul>
 <li><p>Geometry:</p>
 <ul>
@@ -512,16 +548,15 @@ attribute</p>
 </ul>
 </li>
 </ul>
-</section><section id="gdal-implementation"><div class="header-wrapper"><h3 id="x2-3-gdal-implementation"><bdi class="secno">2.3 </bdi>GDAL IMPLEMENTATION</h3><a class="self-link" href="#gdal-implementation" aria-label="Permalink for Section 2.3"></a></div>
-<ul>
-<li><p>Formats JSON-FG &lt;&gt;:</p>
+</section><section id="gdal-dev-implementation"><div class="header-wrapper"><h3 id="x3-2-gdal-dev-implementation"><bdi class="secno">3.2 </bdi>GDAL-dev implementation</h3><a class="self-link" href="#gdal-dev-implementation" aria-label="Permalink for Section 3.2"></a></div>
+<section id="formats-json-fg"><div class="header-wrapper"><h4 id="x3-2-1-formats-json-fg"><bdi class="secno">3.2.1 </bdi>Formats JSON-FG &lt;&gt;:</h4><a class="self-link" href="#formats-json-fg" aria-label="Permalink for Section 3.2.1"></a></div>
 <ul>
 <li><p>GML</p>
 <ul>
 <li><p>GeoJSON</p>
 <ul>
 <li><p>PostgreSQL</p>
-</li>
+<ul>
 <li><p>OpenFileGeodatabase (ESRI)</p>
 </li>
 <li><p>Esri Shapefile</p>
@@ -532,10 +567,11 @@ attribute</p>
 <ul>
 <li><p>Syntax/Format:</p>
 <ul>
-<li><p>URI: "<a href="http://www.opengis.net/def/crs/EPSG/0/28992">http://www.opengis.net/def/crs/EPSG/0/28992</a>"</p>
-<p>SAFE CURIE: "[EPSG: 3857]"</p>
-</li>
+<li>URI: "<a href="http://www.opengis.net/def/crs/EPSG/0/28992">http://www.opengis.net/def/crs/EPSG/0/28992</a>"</li>
 </ul>
+<ol>
+<li>SAFE CURIE: "[EPSG: 3857]"</li>
+</ol>
 </li>
 </ul>
 </li>
@@ -551,7 +587,7 @@ attribute</p>
 </ul>
 </li>
 </ul>
-</section><section id="test-execution"><div class="header-wrapper"><h3 id="x2-4-test-execution"><bdi class="secno">2.4 </bdi>TEST EXECUTION</h3><a class="self-link" href="#test-execution" aria-label="Permalink for Section 2.4"></a></div>
+</section></section><section id="test-execution"><div class="header-wrapper"><h3 id="x3-3-test-execution"><bdi class="secno">3.3 </bdi>Test execution</h3><a class="self-link" href="#test-execution" aria-label="Permalink for Section 3.3"></a></div>
 <ul>
 <li><p>Datasets:</p>
 <ul>
@@ -569,19 +605,19 @@ attribute</p>
 </li>
 </ul>
 </section></section>
-  <section class="informative" id="results"><div class="header-wrapper"><h2 id="x3-results"><bdi class="secno">3. </bdi>Results</h2><a class="self-link" href="#results" aria-label="Permalink for Section 3."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
+  <section class="informative" id="results"><div class="header-wrapper"><h2 id="x4-results"><bdi class="secno">4. </bdi>Results</h2><a class="self-link" href="#results" aria-label="Permalink for Section 4."></a></div><p><em>This section is non-normative.</em></p>
 </section>
   
 
-  <section id="conformance"><div class="header-wrapper"><h2 id="x4-conformiteit"><bdi class="secno">4. </bdi>Conformiteit</h2><a class="self-link" href="#conformance" aria-label="Permalink for Section 4."></a></div><p>Naast onderdelen die als niet normatief gemarkeerd zijn, zijn ook alle diagrammen, voorbeelden, en noten in dit document niet normatief. Verder is alles in dit document normatief.</p></section>
+  <section id="conformance"><div class="header-wrapper"><h2 id="x5-conformance"><bdi class="secno">5. </bdi>Conformance</h2><a class="self-link" href="#conformance" aria-label="Permalink for Section 5."></a></div><p>As well as sections marked as non-normative, all authoring guidelines, diagrams, examples, and notes in this specification are non-normative. Everything else in this specification is normative.</p></section>
   <section id="tof"></section>
   <section id="index" class="appendix"><div class="header-wrapper"><h2 id="a-index"><bdi class="secno">A. </bdi>Index</h2><a class="self-link" href="#index" aria-label="Permalink for Appendix A."></a></div><section id="index-defined-here">
-    <div class="header-wrapper"><h3 id="a-1-begrippen-gedefinieerd-door-deze-specificatie"><bdi class="secno">A.1 </bdi>Begrippen gedefinieerd door deze specificatie</h3><a class="self-link" href="#index-defined-here" aria-label="Permalink for Appendix A.1"></a></div>
+    <div class="header-wrapper"><h3 id="a-1-terms-defined-by-this-specification"><bdi class="secno">A.1 </bdi>Terms defined by this specification</h3><a class="self-link" href="#index-defined-here" aria-label="Permalink for Appendix A.1"></a></div>
     <ul class="index">
     
   </ul>
   </section><section id="index-defined-elsewhere">
-    <div class="header-wrapper"><h3 id="a-2-begrippen-gedefinieerd-door-verwijzing"><bdi class="secno">A.2 </bdi>Begrippen gedefinieerd door verwijzing</h3><a class="self-link" href="#index-defined-elsewhere" aria-label="Permalink for Appendix A.2"></a></div>
+    <div class="header-wrapper"><h3 id="a-2-terms-defined-by-reference"><bdi class="secno">A.2 </bdi>Terms defined by reference</h3><a class="self-link" href="#index-defined-elsewhere" aria-label="Permalink for Appendix A.2"></a></div>
     <ul class="index">
     
   </ul>
@@ -813,4 +849,4 @@ function hidePanel(panel) {
   panel.hidden = true;
   panel.classList.remove("docked");
 }
-})()</script><div class="sidelabel">Geonovum Algemeen - Werkversie</div><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body></html>
+})()</script><div class="sidelabel">Geonovum General - Editor's draft</div><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body></html>
