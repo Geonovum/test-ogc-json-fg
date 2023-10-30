@@ -7,7 +7,7 @@
             <imgeo:relatieveHoogteligging>0</imgeo:relatieveHoogteligging>
             <imgeo:inOnderzoek>false</imgeo:inOnderzoek>
             <imgeo:tijdstipRegistratie>2017-10-16T10:53:23.000</imgeo:tijdstipRegistratie>
-            <imgeo:time>2017-10-16T10:53:23.000</imgeo:time>
+            <imgeo:time.date>2017-10-16T10:53:23.000</imgeo:time.date>
             <imgeo:identificatie>
                 <imgeo:NEN3610ID>
                     <imgeo:namespace>NL.IMGeo</imgeo:namespace>
