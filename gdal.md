@@ -1,0 +1,1 @@
+# About the GDAL implementation of JSON-FG
