@@ -25,8 +25,8 @@
       <ogr:plus_type>afval apart plaats</ogr:plus_type>
       <ogr:terminationDate>2018-06-21</ogr:terminationDate>
       <ogr:eindRegistratie>2018-06-21T14:23:20</ogr:eindRegistratie>
-      <ogr:time_start>2015-08-17T14:14:14.000</ogr:time_start>
-      <ogr:time_end>2018-06-21T14:23:20</ogr:time_end>
+      <ogr:time_end>2015-08-17T14:14:14.000</ogr:time_end>
+      <ogr:time_start>2018-06-21T14:23:20</ogr:time_start>
     </ogr:Bak>
   </ogr:featureMember>
 </ogr:FeatureCollection>
