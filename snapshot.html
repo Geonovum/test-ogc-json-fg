@@ -308,7 +308,7 @@ ul.index code{color:inherit}
     <h2>
       Geonovum Algemeen<br>
       Werkversie
-      <time class="dt-published" datetime="2023-10-29">29 oktober 2023</time>
+      <time class="dt-published" datetime="2023-10-30">30 oktober 2023</time>
     </h2>
     <dl>
       
@@ -355,7 +355,7 @@ ul.index code{color:inherit}
 2023
 <a href="https://developer.ogc.org/sprints/22/#:~:text=When%20is%20the%20code%20sprint,be%20held%20on%20October%2C%2012">https://developer.ogc.org/sprints/22/#:~:text=When%20is%20the%20code%20sprint,be%20held%20on%20October%2C%2012</a>.</p>
 </section>
-  <section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#about-json-fg"><bdi class="secno">1. </bdi>About JSON-FG</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#temporal-information"><bdi class="secno">1.1 </bdi>Temporal information</a></li><li class="tocline"><a class="tocxref" href="#additional-geometry-types"><bdi class="secno">1.2 </bdi>Additional geometry types</a></li><li class="tocline"><a class="tocxref" href="#coordinate-reference-systems"><bdi class="secno">1.3 </bdi>Coordinate reference systems</a></li><li class="tocline"><a class="tocxref" href="#feature-types-and-feature-schema"><bdi class="secno">1.4 </bdi>Feature types and feature schema</a></li></ol></li><li class="tocline"><a class="tocxref" href="#test-scenarios"><bdi class="secno">2. </bdi>Test scenarios</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#draft-specification"><bdi class="secno">2.1 </bdi>Draft specification</a></li><li class="tocline"><a class="tocxref" href="#gdal-dev-implementation"><bdi class="secno">2.2 </bdi>GDAL-dev implementation</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#formats-json-fg"><bdi class="secno">2.2.1 </bdi>Formats JSON-FG &lt;&gt;:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#test-execution"><bdi class="secno">2.3 </bdi>Test execution</a></li></ol></li><li class="tocline"><a class="tocxref" href="#results"><bdi class="secno">3. </bdi>Results</a></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">4. </bdi>Conformiteit</a></li><li class="tocline"><a class="tocxref" href="#index"><bdi class="secno">A. </bdi>Index</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#index-defined-here"><bdi class="secno">A.1 </bdi>Begrippen gedefinieerd door deze specificatie</a></li><li class="tocline"><a class="tocxref" href="#index-defined-elsewhere"><bdi class="secno">A.2 </bdi>Begrippen gedefinieerd door verwijzing</a></li></ol></li></ol></nav>
+  <section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#about-json-fg"><bdi class="secno">1. </bdi>About JSON-FG</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#temporal-information"><bdi class="secno">1.1 </bdi>Temporal information</a></li><li class="tocline"><a class="tocxref" href="#additional-geometry-types"><bdi class="secno">1.2 </bdi>Additional geometry types</a></li><li class="tocline"><a class="tocxref" href="#coordinate-reference-systems"><bdi class="secno">1.3 </bdi>Coordinate reference systems</a></li><li class="tocline"><a class="tocxref" href="#feature-types-and-feature-schema"><bdi class="secno">1.4 </bdi>Feature types and feature schema</a></li></ol></li><li class="tocline"><a class="tocxref" href="#about-the-gdal-implementation-of-json-fg"><bdi class="secno">2. </bdi>About the GDAL implementation of JSON-FG</a></li><li class="tocline"><a class="tocxref" href="#test-scenarios"><bdi class="secno">3. </bdi>Test scenarios</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#draft-specification"><bdi class="secno">3.1 </bdi>Draft specification</a></li><li class="tocline"><a class="tocxref" href="#gdal-dev-implementation"><bdi class="secno">3.2 </bdi>GDAL-dev implementation</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#formats-json-fg"><bdi class="secno">3.2.1 </bdi>Formats JSON-FG &lt;&gt;:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#test-execution"><bdi class="secno">3.3 </bdi>Test execution</a></li></ol></li><li class="tocline"><a class="tocxref" href="#results"><bdi class="secno">4. </bdi>Results</a></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">5. </bdi>Conformiteit</a></li><li class="tocline"><a class="tocxref" href="#index"><bdi class="secno">A. </bdi>Index</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#index-defined-here"><bdi class="secno">A.1 </bdi>Begrippen gedefinieerd door deze specificatie</a></li><li class="tocline"><a class="tocxref" href="#index-defined-elsewhere"><bdi class="secno">A.2 </bdi>Begrippen gedefinieerd door verwijzing</a></li></ol></li></ol></nav>
 
   
   <section class="informative" id="about-json-fg"><div class="header-wrapper"><h2 id="x1-about-json-fg"><bdi class="secno">1. </bdi>About JSON-FG</h2><a class="self-link" href="#about-json-fg" aria-label="Permalink for Section 1."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
@@ -390,7 +390,9 @@ in a separate <em>place</em> attribute.</p>
 collection, both homogeneous and heterogeneous in terms of the feature types,
 using for example feature schemas.</p>
 </section></section>
-  <section class="informative" id="test-scenarios"><div class="header-wrapper"><h2 id="x2-test-scenarios"><bdi class="secno">2. </bdi>Test scenarios</h2><a class="self-link" href="#test-scenarios" aria-label="Permalink for Section 2."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
+  <section class="informative" id="about-the-gdal-implementation-of-json-fg"><div class="header-wrapper"><h2 id="x2-about-the-gdal-implementation-of-json-fg"><bdi class="secno">2. </bdi>About the GDAL implementation of JSON-FG</h2><a class="self-link" href="#about-the-gdal-implementation-of-json-fg" aria-label="Permalink for Section 2."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
+</section>
+  <section class="informative" id="test-scenarios"><div class="header-wrapper"><h2 id="x3-test-scenarios"><bdi class="secno">3. </bdi>Test scenarios</h2><a class="self-link" href="#test-scenarios" aria-label="Permalink for Section 3."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
 <p>TODO: collect test cases, resultats etc in Excel spreadsheet.</p>
 <p>For example:</p>
 <p>N.B. THIS IS AN EXAMPLE SPREADSHEET AND DOES NOT CONTAIN TRUE TEST RESULTS.</p>
@@ -462,7 +464,7 @@ using for example feature schemas.</p>
 <td></td>
 </tr>
 </tbody></table>
-<section id="draft-specification"><div class="header-wrapper"><h3 id="x2-1-draft-specification"><bdi class="secno">2.1 </bdi>Draft specification</h3><a class="self-link" href="#draft-specification" aria-label="Permalink for Section 2.1"></a></div>
+<section id="draft-specification"><div class="header-wrapper"><h3 id="x3-1-draft-specification"><bdi class="secno">3.1 </bdi>Draft specification</h3><a class="self-link" href="#draft-specification" aria-label="Permalink for Section 3.1"></a></div>
 <ul>
 <li><p>Geometry:</p>
 <ul>
@@ -511,8 +513,8 @@ attribute</p>
 </ul>
 </li>
 </ul>
-</section><section id="gdal-dev-implementation"><div class="header-wrapper"><h3 id="x2-2-gdal-dev-implementation"><bdi class="secno">2.2 </bdi>GDAL-dev implementation</h3><a class="self-link" href="#gdal-dev-implementation" aria-label="Permalink for Section 2.2"></a></div>
-<section id="formats-json-fg"><div class="header-wrapper"><h4 id="x2-2-1-formats-json-fg"><bdi class="secno">2.2.1 </bdi>Formats JSON-FG &lt;&gt;:</h4><a class="self-link" href="#formats-json-fg" aria-label="Permalink for Section 2.2.1"></a></div>
+</section><section id="gdal-dev-implementation"><div class="header-wrapper"><h3 id="x3-2-gdal-dev-implementation"><bdi class="secno">3.2 </bdi>GDAL-dev implementation</h3><a class="self-link" href="#gdal-dev-implementation" aria-label="Permalink for Section 3.2"></a></div>
+<section id="formats-json-fg"><div class="header-wrapper"><h4 id="x3-2-1-formats-json-fg"><bdi class="secno">3.2.1 </bdi>Formats JSON-FG &lt;&gt;:</h4><a class="self-link" href="#formats-json-fg" aria-label="Permalink for Section 3.2.1"></a></div>
 <ul>
 <li><p>GML</p>
 <ul>
@@ -550,7 +552,7 @@ attribute</p>
 </ul>
 </li>
 </ul>
-</section></section><section id="test-execution"><div class="header-wrapper"><h3 id="x2-3-test-execution"><bdi class="secno">2.3 </bdi>Test execution</h3><a class="self-link" href="#test-execution" aria-label="Permalink for Section 2.3"></a></div>
+</section></section><section id="test-execution"><div class="header-wrapper"><h3 id="x3-3-test-execution"><bdi class="secno">3.3 </bdi>Test execution</h3><a class="self-link" href="#test-execution" aria-label="Permalink for Section 3.3"></a></div>
 <ul>
 <li><p>Datasets:</p>
 <ul>
@@ -568,11 +570,11 @@ attribute</p>
 </li>
 </ul>
 </section></section>
-  <section class="informative" id="results"><div class="header-wrapper"><h2 id="x3-results"><bdi class="secno">3. </bdi>Results</h2><a class="self-link" href="#results" aria-label="Permalink for Section 3."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
+  <section class="informative" id="results"><div class="header-wrapper"><h2 id="x4-results"><bdi class="secno">4. </bdi>Results</h2><a class="self-link" href="#results" aria-label="Permalink for Section 4."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
 </section>
   
 
-  <section id="conformance"><div class="header-wrapper"><h2 id="x4-conformiteit"><bdi class="secno">4. </bdi>Conformiteit</h2><a class="self-link" href="#conformance" aria-label="Permalink for Section 4."></a></div><p>Naast onderdelen die als niet normatief gemarkeerd zijn, zijn ook alle diagrammen, voorbeelden, en noten in dit document niet normatief. Verder is alles in dit document normatief.</p></section>
+  <section id="conformance"><div class="header-wrapper"><h2 id="x5-conformiteit"><bdi class="secno">5. </bdi>Conformiteit</h2><a class="self-link" href="#conformance" aria-label="Permalink for Section 5."></a></div><p>Naast onderdelen die als niet normatief gemarkeerd zijn, zijn ook alle diagrammen, voorbeelden, en noten in dit document niet normatief. Verder is alles in dit document normatief.</p></section>
   <section id="tof"></section>
   <section id="index" class="appendix"><div class="header-wrapper"><h2 id="a-index"><bdi class="secno">A. </bdi>Index</h2><a class="self-link" href="#index" aria-label="Permalink for Appendix A."></a></div><section id="index-defined-here">
     <div class="header-wrapper"><h3 id="a-1-begrippen-gedefinieerd-door-deze-specificatie"><bdi class="secno">A.1 </bdi>Begrippen gedefinieerd door deze specificatie</h3><a class="self-link" href="#index-defined-here" aria-label="Permalink for Appendix A.1"></a></div>
