@@ -43,4 +43,4 @@ GeoJSON clients:
 3. QGIS also works the same; it recognizes features in the file only if `geometry` has coordinates. It reads properties and ignores JSON-FG specific members.
 
 JSON-FG clients: 
-- A [JSON-FG client](https://ivansanchez.gitlab.io/gleo/demos/jsonfg-drag-drop.html) by Ivan Sanchez from an earlier code sprint is used to demonstrate that the JSON-FG output from GDAL can be visualised in a web browser. This works as expected.
+- A [JSON-FG client](https://ivansanchez.gitlab.io/gleo/demos/jsonfg-drag-drop.html) by Ivan Sanchez from an earlier code sprint is used to demonstrate that the JSON-FG output from GDAL can be visualised in a web browser. This works as expected. The client visualizes the features the `place` member, regardless of the presence or absence of coordinates in the `geometry` member. 
