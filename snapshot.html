@@ -622,7 +622,8 @@ attribute</p>
 </section><section id="time"><div class="header-wrapper"><h3 id="x4-2-time"><bdi class="secno">4.2 </bdi>Time</h3><a class="self-link" href="#time" aria-label="Permalink for Section 4.2"></a></div>
 <p>The <code>time</code> member initially was filled with a <code>null</code> value by GDAL, because it could not identify the temporal information to use in the source data. There is no specific option in GDAL to point to the right source element. It looks for an element called <code>time</code>, <code>time_start</code>, or <code>time_end</code>. If that's not what it's called in your input, you need to do some remapping. You can do this e.g. with an SQL statement: </p>
 <p><code>ogr2ogr out.json test.xml -of jsonfg -sql "select cast (creationDate as date) as time, * from BAK"</code></p>
-<p>Where <code>creationDate</code> is the date element in the input we're interested in.</p>
+<p>In the example above, <code>creationDate</code> is the date element in the input we're interested in.</p>
+<p>GDAL also writes the original property to <code>properties</code>, which is nice because the infomrmation is then not lost to GeoJSON clients (that only read <code>geometry</code> and <code>properties</code>). </p>
 </section><section id="featuretype"><div class="header-wrapper"><h3 id="x4-3-featuretype"><bdi class="secno">4.3 </bdi>featureType</h3><a class="self-link" href="#featuretype" aria-label="Permalink for Section 4.3"></a></div>
 <p>GDAL takes the featureType value from the element name in the case of GML, and from the column name in the case of GeoPackage. </p>
 </section><section id="x3d-geometries"><div class="header-wrapper"><h3 id="x4-4-3d-geometries"><bdi class="secno">4.4 </bdi>3D geometries</h3><a class="self-link" href="#x3d-geometries" aria-label="Permalink for Section 4.4"></a></div>
