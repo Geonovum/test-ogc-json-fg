@@ -19,12 +19,12 @@ The `time` member initially was filled with a `null` value by GDAL, because it c
 
 In the example above, `creationDate` is the date element in the input we're interested in.
 
-GDAL also writes the original property to `properties`, which is nice because the infomrmation is then not lost to GeoJSON clients (that only read `geometry` and `properties`). 
+GDAL also writes the original property to `properties`, which is nice because the information is then not lost to GeoJSON clients (that only read `geometry` and `properties`). 
 
-## featureType
+## featureType and schema
 GDAL takes the featureType value from the element name in the case of GML, and from the column name in the case of GeoPackage. 
 
-There is no option to have GDAL write the featureSchema with a URL pointing to a JSON Schema for a feature. We did create a JSON Schema by hand (for [BAK features](https://github.com/Geonovum/test-ogc-json-fg/blob/main/testdata/bgt/citygml/schema/bak.jschema)). 
+There is no option to have GDAL write the featureSchema with a URL pointing to a JSON Schema for a feature. We did create a JSON Schema by hand (for [BAK features](https://github.com/Geonovum/test-ogc-json-fg/blob/main/testdata/bgt/citygml/schema/bak.jschema)). For purposes of creating a comprehensive example file, we add this manually.
 
 ## 3D geometries
 
@@ -43,4 +43,4 @@ GeoJSON clients:
 3. QGIS also works the same; it recognizes features in the file only if `geometry` has coordinates. It reads properties and ignores JSON-FG specific members.
 
 JSON-FG clients: 
-- TODO
+- A [JSON-FG client](https://ivansanchez.gitlab.io/gleo/demos/jsonfg-drag-drop.html) by Ivan Sanchez from an earlier code sprint is used to demonstrate that the JSON-FG output from GDAL can be visualised in a web browser. This works as expected.

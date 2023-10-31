@@ -1,5 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://register.geostandaarden.nl/jsonschema/imgeo/2.1.1/bak.json",
     "title": "Bak",
     "description": "This JSON Schema describes the structure for BAK features",
     "type": "object",
@@ -9,10 +10,10 @@
             "type": "string"
         },
         "lokaalID": {"type": "string"},
-        "creationDate": {"$ref": "https://register.geostandaarden.nl/jsonschema/uml2json/0.1/schema_definitions.json#/$defs/PrimaryInstantRequired"},
-        "tijdstipregistratie": {"$ref": "https://register.geostandaarden.nl/jsonschema/uml2json/0.1/schema_definitions.json#/$defs/PrimaryInstantRequired"},
-        "eindRegistratie": {"$ref": "https://register.geostandaarden.nl/jsonschema/uml2json/0.1/schema_definitions.json#/$defs/PrimaryInstantRequired"},
-        "LV-publicatiedatum": {"$ref": "https://register.geostandaarden.nl/jsonschema/uml2json/0.1/schema_definitions.json#/$defs/PrimaryInstantRequired"},
+        "creationDate": {"type": "string", "format": "date"},
+        "tijdstipregistratie": {"type": "string", "format": "datetime"},
+        "eindRegistratie": {"type": "string", "format": "datetime"},
+        "LV-publicatiedatum": {"type": "string", "format": "datetime"},
         "bronhouder": {"type": "string"},
         "relatieveHoogteligging": {"type": "integer"},
         "bgt-status": {"type": "string"},
