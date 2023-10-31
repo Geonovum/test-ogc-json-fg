@@ -1,0 +1,24 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Bak",
+    "description": "This JSON Schema describes the structure for BAK features",
+    "type": "object",
+    "properties": {
+        "gml_id": {
+            "description": "The propertyName description",
+            "type": "string"
+        },
+        "lokaalID": {"type": "string"},
+        "creationDate": {"$ref": "https://register.geostandaarden.nl/jsonschema/uml2json/0.1/schema_definitions.json#/$defs/PrimaryInstantRequired"},
+        "tijdstipregistratie": {"$ref": "https://register.geostandaarden.nl/jsonschema/uml2json/0.1/schema_definitions.json#/$defs/PrimaryInstantRequired"},
+        "eindRegistratie": {"$ref": "https://register.geostandaarden.nl/jsonschema/uml2json/0.1/schema_definitions.json#/$defs/PrimaryInstantRequired"},
+        "LV-publicatiedatum": {"$ref": "https://register.geostandaarden.nl/jsonschema/uml2json/0.1/schema_definitions.json#/$defs/PrimaryInstantRequired"},
+        "bronhouder": {"type": "string"},
+        "relatieveHoogteligging": {"type": "integer"},
+        "bgt-status": {"type": "string"},
+        "plus-status": {"type": "string"},
+        "function": {"type": "string"},
+        "plus-type": {"type": "string"}
+    },
+    "required": ["gml_id","lokaalID","creationDate","tijdstipRegistratie","LV-publicatiedatum","bronhouder","relatieveHoogteligging","bgt-status","function"]
+}

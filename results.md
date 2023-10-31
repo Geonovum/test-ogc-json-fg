@@ -24,6 +24,8 @@ GDAL also writes the original property to `properties`, which is nice because th
 ## featureType
 GDAL takes the featureType value from the element name in the case of GML, and from the column name in the case of GeoPackage. 
 
+There is no option to have GDAL write the featureSchema with a URL pointing to a JSON Schema for a feature. We did create a JSON Schema by hand (for [BAK features](https://github.com/Geonovum/test-ogc-json-fg/blob/main/testdata/bgt/citygml/schema/bak.jschema)). 
+
 ## 3D geometries
 
 TODO. 
