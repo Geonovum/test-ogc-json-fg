@@ -45,7 +45,7 @@ let respecConfig = {
   editors:
     [
       {
-        name: "voornaam achternaam",
+        name: "Arnoud de Boer",
         company: "Geonovum",
         companyURL: "https://www.geonovum.nl",
       }
@@ -55,7 +55,12 @@ let respecConfig = {
   authors:
     [
       {
-        name: "voornaam achternaam",
+        name: "Linda van den Brink",
+        company: "Geonovum",
+        companyURL: "https://www.geonovum.nl",
+      },
+      {        
+        name: "Arnoud de Boer",
         company: "Geonovum",
         companyURL: "https://www.geonovum.nl",
       }
