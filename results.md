@@ -17,7 +17,9 @@ The `time` member initially was filled with a `null` value by GDAL, because it c
 
 `ogr2ogr out.json test.xml -of jsonfg -sql "select cast (creationDate as date) as time, * from BAK"`
 
-Where `creationDate` is the date element in the input we're interested in.
+In the example above, `creationDate` is the date element in the input we're interested in.
+
+GDAL also writes the original property to `properties`, which is nice because the infomrmation is then not lost to GeoJSON clients (that only read `geometry` and `properties`). 
 
 ## featureType
 GDAL takes the featureType value from the element name in the case of GML, and from the column name in the case of GeoPackage. 
