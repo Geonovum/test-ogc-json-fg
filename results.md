@@ -40,29 +40,33 @@ We tested the sample output in different clients.
 GeoJSON clients:
 1. Github file preview. When `geometry` has coordinate values, this shows a map with point features. When `geometry` is null, it shows a world map without features. So this works as expected.
 
-Github file preview, with coordinates in `geometry`: 
+<figure>
+    <img src="media/bakjsoningithubpreview.png" alt="bakjsoningithubpreview"/>
+    <figcaption>Github file preview, with coordinates in <code>geometry</code></figcaption>
+</figure>
 
-![Github file preview, with coordinates in `geometry`](media/bakjsoningithubpreview.png)
-
-Github file preview, without coordinates in `geometry`: 
-
-![Github file preview, without coordinates in `geometry`](media/bakjsoningithubpreview_nogeometry.png)
+<figure>
+    <img src="media/bakjsoningithubpreview_nogeometry.png" alt="bakjsoningithubpreview_nogeometry"/>
+    <figcaption>Github file preview, without coordinates in <code>geometry</code></figcaption>
+</figure>
 
 2. [geojson.io](https://geojson.io/) (mapbox). Result is the same as [1]. 
 
-geojson.io viewer, with coordinates in `geometry`:
-
-![geojson.io viewer, with coordinates in `geometry`](media/bakjsoningithubpreview.png)
-
-geojson.io viewer, without coordinates in `geometry`:
-
-![geojson.io viewer, without coordinates in `geometry`](media/bakingeojsonio_nogeometry.png)
+<figure>
+    <img src="media/bakingeojsonio.png" alt="bakingeojsonio"/>
+    <figcaption>geojson.io viewer, with coordinates in <code>geometry</code></figcaption>
+</figure>
+<figure>
+    <img src="media/bakingeojsonio_nogeometry.png" alt="bakingeojsonio_nogeometry"/>
+    <figcaption>geojson.io viewer, without coordinates in <code>geometry</code></figcaption>
+</figure>
 
 3. QGIS also works the same; it recognizes features in the file only if `geometry` has coordinates. It reads `properties` and ignores JSON-FG specific members.
 
 JSON-FG clients: 
 - A [JSON-FG client](https://ivansanchez.gitlab.io/gleo/demos/jsonfg-drag-drop.html) by Ivan Sanchez from an earlier code sprint is used to demonstrate that the JSON-FG output from GDAL can be visualised in a web browser. This works as expected. The client visualizes the features based on the values of the `place` member, regardless of the presence or absence of coordinates in the `geometry` member. 
 
-JSON-FG client showing features based on coordinates in `place` member:
-
-![JSON FG client](media/ivansanchez.gitlab.io.png)
+<figure>
+    <img src="media/ivansanchez.gitlab.io.png" alt="ivansanchez.gitlab.io"/>
+    <figcaption>JSON-FG client showing features based on coordinates in <code>place</code> member</figcaption>
+</figure>
