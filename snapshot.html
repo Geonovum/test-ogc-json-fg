@@ -626,6 +626,7 @@ attribute</p>
 <p>GDAL also writes the original property to <code>properties</code>, which is nice because the infomrmation is then not lost to GeoJSON clients (that only read <code>geometry</code> and <code>properties</code>). </p>
 </section><section id="featuretype"><div class="header-wrapper"><h3 id="x4-3-featuretype"><bdi class="secno">4.3 </bdi>featureType</h3><a class="self-link" href="#featuretype" aria-label="Permalink for Section 4.3"></a></div>
 <p>GDAL takes the featureType value from the element name in the case of GML, and from the column name in the case of GeoPackage. </p>
+<p>There is no option to have GDAL write the featureSchema with a URL pointing to a JSON Schema for a feature. We did create a JSON Schema by hand (for <a href="https://github.com/Geonovum/test-ogc-json-fg/blob/main/testdata/bgt/citygml/schema/bak.jschema">BAK features</a>). </p>
 </section><section id="x3d-geometries"><div class="header-wrapper"><h3 id="x4-4-3d-geometries"><bdi class="secno">4.4 </bdi>3D geometries</h3><a class="self-link" href="#x3d-geometries" aria-label="Permalink for Section 4.4"></a></div>
 <p>TODO. </p>
 </section><section id="sample-output"><div class="header-wrapper"><h3 id="x4-5-sample-output"><bdi class="secno">4.5 </bdi>Sample output</h3><a class="self-link" href="#sample-output" aria-label="Permalink for Section 4.5"></a></div>
