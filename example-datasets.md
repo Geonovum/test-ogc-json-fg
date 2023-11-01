@@ -40,8 +40,9 @@ the geometry member, and the geometries in RD in place member. The advantage is
 that the JSON-FG can also be read in a GeoJSON client. The disadvantage is
 increasing the file size (and payload).
 
-NOTE: A JSON-FG file can contain both geometry in WGS'84 in the geometry member
+<details class="note">A JSON-FG file can contain both geometry in WGS'84 in the geometry member
 and geometry in RD in the place member.
+</details>
 
 **Process**
 
@@ -62,9 +63,10 @@ We create two example datasets with the GDAL draft implementation:
 \- a dataset with geometry in WGS'84 in the geometry member and geometry in RD in
 the place member
 
-NOTE: With the GDAL layer creation option (lco) WRITE_GEOMETRY you can choose
+<details class="note">With the GDAL layer creation option (lco) WRITE_GEOMETRY you can choose
 wether you want geometries in both geometry and place member
 (WRITE_GEOMETRY=YES) or in one of the two members (WRITE_GEOMETRY=NO).
+</details>
 
 **Result**
 
