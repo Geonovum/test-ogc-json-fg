@@ -197,14 +197,13 @@ We update the geometry with the latest available geometry in the datasets.
 Ultimately, we export to a GPKG-file with municipalities including the code,
 name, creation date and termination date for each municipality.
 
-**Remarks**
-
+<details class="note">
+Two remarks on the example datasets:
 1.  municipalities that exist in the 2003 dataset and are not terminated, get
     creation date (‘2003-01-01’).
-
 2.  when municipalities merge, a new municipality is legally created, but this
     has been ignored for simplicity reasons.
-
+</details>
 Finally, the GPKG file is exported to a JSON-FG using the GDAL draft
 implementation.
 
