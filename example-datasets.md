@@ -208,6 +208,14 @@ implementation.
 
 **Result**
 
+We created two example datasets of Dutch municipalities from 2003 to 2021: 
+one with GeoJSON-geometries in the geojson member, and one without.
+
+- [Dutch municipalities 2003-2023 with geometry members](https://github.com/Geonovum-labs/test-ogc-json-fg/blob/main/example-datasets/gemeenten_with_geometry.json)
+- [Dutch municipalities 2003-2023 without geometry members](https://github.com/Geonovum-labs/test-ogc-json-fg/blob/main/example-datasets/gemeenten_no_geometry.json)
+
+
+<pre>
 {
     "type": "FeatureCollection",
     "conformsTo": [
