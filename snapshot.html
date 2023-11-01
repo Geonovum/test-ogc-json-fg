@@ -299,14 +299,19 @@ ul.index code{color:inherit}
   "shortName": "test-ogc-json-fg",
   "editors": [
     {
-      "name": "voornaam achternaam",
+      "name": "Arnoud de Boer",
       "company": "Geonovum",
       "companyURL": "https://www.geonovum.nl"
     }
   ],
   "authors": [
     {
-      "name": "voornaam achternaam",
+      "name": "Linda van den Brink",
+      "company": "Geonovum",
+      "companyURL": "https://www.geonovum.nl"
+    },
+    {
+      "name": "Arnoud de Boer",
       "company": "Geonovum",
       "companyURL": "https://www.geonovum.nl"
     }
@@ -315,7 +320,7 @@ ul.index code{color:inherit}
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/base.css"></head>
 
-<body class="h-entry"><div class="head">
+<body class="h-entry toc-inline"><div class="head">
     <a class="logo" href="https://www.geonovum.nl/geo-standaarden"><img alt="Geonovum" height="67" id="Geonovum" src="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.svg" width="132">
   </a> <h1 id="title" class="title">Testing OGC JSON-FG Draft Specification and its GDAL-DEV Implementation</h1>
     
@@ -335,11 +340,13 @@ ul.index code{color:inherit}
       
       <dt>Editor:</dt>
       <dd class="editor p-author h-card vcard">
-    <span class="p-name fn">voornaam achternaam</span> (<a class="p-org org h-org" href="https://www.geonovum.nl">Geonovum</a>)
+    <span class="p-name fn">Arnoud de Boer</span> (<a class="p-org org h-org" href="https://www.geonovum.nl">Geonovum</a>)
   </dd>
       
-      <dt>Author:</dt><dd class="editor p-author h-card vcard">
-    <span class="p-name fn">voornaam achternaam</span> (<a class="p-org org h-org" href="https://www.geonovum.nl">Geonovum</a>)
+      <dt>Authors:</dt><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Linda van den Brink</span> (<a class="p-org org h-org" href="https://www.geonovum.nl">Geonovum</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Arnoud de Boer</span> (<a class="p-org org h-org" href="https://www.geonovum.nl">Geonovum</a>)
   </dd>
       <dt>Participate:</dt><dd>
     <a href="https://github.com/Geonovum/test-ogc-json-fg/">GitHub Geonovum/test-ogc-json-fg</a>
@@ -369,7 +376,7 @@ ul.index code{color:inherit}
 2023
 <a href="https://developer.ogc.org/sprints/22/#:~:text=When%20is%20the%20code%20sprint,be%20held%20on%20October%2C%2012">https://developer.ogc.org/sprints/22/#:~:text=When%20is%20the%20code%20sprint,be%20held%20on%20October%2C%2012</a>.</p>
 </section>
-  <section id="sotd" class="introductory"><h2>Status of this document</h2><p>This is a working draft that can be changed, removed or replaced by other documents at any time. It is not a stable document.</p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of this document</a></li><li class="tocline"><a class="tocxref" href="#about-json-fg"><bdi class="secno">1. </bdi>About JSON-FG</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#temporal-information"><bdi class="secno">1.1 </bdi>Temporal information</a></li><li class="tocline"><a class="tocxref" href="#additional-geometry-types"><bdi class="secno">1.2 </bdi>Additional geometry types</a></li><li class="tocline"><a class="tocxref" href="#coordinate-reference-systems"><bdi class="secno">1.3 </bdi>Coordinate reference systems</a></li><li class="tocline"><a class="tocxref" href="#feature-types-and-feature-schema"><bdi class="secno">1.4 </bdi>Feature types and feature schema</a></li></ol></li><li class="tocline"><a class="tocxref" href="#about-the-gdal-implementation-of-json-fg"><bdi class="secno">2. </bdi>About the GDAL implementation of JSON-FG</a></li><li class="tocline"><a class="tocxref" href="#test-scenarios"><bdi class="secno">3. </bdi>Test scenarios</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#draft-specification"><bdi class="secno">3.1 </bdi>Draft specification</a></li><li class="tocline"><a class="tocxref" href="#gdal-dev-implementation"><bdi class="secno">3.2 </bdi>GDAL-dev implementation</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#formats-json-fg"><bdi class="secno">3.2.1 </bdi>Formats JSON-FG &lt;&gt;:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#test-execution"><bdi class="secno">3.3 </bdi>Test execution</a></li></ol></li><li class="tocline"><a class="tocxref" href="#results"><bdi class="secno">4. </bdi>Results</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#geometry-and-place"><bdi class="secno">4.1 </bdi>Geometry and place</a></li><li class="tocline"><a class="tocxref" href="#time"><bdi class="secno">4.2 </bdi>Time</a></li><li class="tocline"><a class="tocxref" href="#featuretype-and-schema"><bdi class="secno">4.3 </bdi>featureType and schema</a></li><li class="tocline"><a class="tocxref" href="#x3d-geometries"><bdi class="secno">4.4 </bdi>3D geometries</a></li><li class="tocline"><a class="tocxref" href="#sample-output"><bdi class="secno">4.5 </bdi>Sample output</a></li><li class="tocline"><a class="tocxref" href="#client-tests"><bdi class="secno">4.6 </bdi>Client tests</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">5. </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#index"><bdi class="secno">A. </bdi>Index</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#index-defined-here"><bdi class="secno">A.1 </bdi>Terms defined by this specification</a></li><li class="tocline"><a class="tocxref" href="#index-defined-elsewhere"><bdi class="secno">A.2 </bdi>Terms defined by reference</a></li></ol></li></ol></nav>
+  <section id="sotd" class="introductory"><h2>Status of this document</h2><p>This is a working draft that can be changed, removed or replaced by other documents at any time. It is not a stable document.</p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of this document</a></li><li class="tocline"><a class="tocxref" href="#about-json-fg"><bdi class="secno">1. </bdi>About JSON-FG</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#temporal-information"><bdi class="secno">1.1 </bdi>Temporal information</a></li><li class="tocline"><a class="tocxref" href="#additional-geometry-types"><bdi class="secno">1.2 </bdi>Additional geometry types</a></li><li class="tocline"><a class="tocxref" href="#coordinate-reference-systems"><bdi class="secno">1.3 </bdi>Coordinate reference systems</a></li><li class="tocline"><a class="tocxref" href="#feature-types-and-feature-schema"><bdi class="secno">1.4 </bdi>Feature types and feature schema</a></li></ol></li><li class="tocline"><a class="tocxref" href="#about-the-gdal-implementation-of-json-fg"><bdi class="secno">2. </bdi>About the GDAL implementation of JSON-FG</a></li><li class="tocline"><a class="tocxref" href="#test-scenarios"><bdi class="secno">3. </bdi>Test scenarios</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#draft-specification"><bdi class="secno">3.1 </bdi>Draft specification</a></li><li class="tocline"><a class="tocxref" href="#gdal-dev-implementation"><bdi class="secno">3.2 </bdi>GDAL-dev implementation</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#formats-json-fg"><bdi class="secno">3.2.1 </bdi>Formats JSON-FG &lt;&gt;:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#test-execution"><bdi class="secno">3.3 </bdi>Test execution</a></li></ol></li><li class="tocline"><a class="tocxref" href="#results"><bdi class="secno">4. </bdi>Results</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#geometry-and-place"><bdi class="secno">4.1 </bdi>Geometry and place</a></li><li class="tocline"><a class="tocxref" href="#time"><bdi class="secno">4.2 </bdi>Time</a></li><li class="tocline"><a class="tocxref" href="#featuretype-and-schema"><bdi class="secno">4.3 </bdi>featureType and schema</a></li><li class="tocline"><a class="tocxref" href="#x3d-geometries"><bdi class="secno">4.4 </bdi>3D geometries</a></li><li class="tocline"><a class="tocxref" href="#sample-output"><bdi class="secno">4.5 </bdi>Sample output</a></li><li class="tocline"><a class="tocxref" href="#client-tests"><bdi class="secno">4.6 </bdi>Client tests</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">5. </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#tof"><bdi class="secno">6. </bdi>List of Figures</a></li><li class="tocline"><a class="tocxref" href="#index"><bdi class="secno">A. </bdi>Index</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#index-defined-here"><bdi class="secno">A.1 </bdi>Terms defined by this specification</a></li><li class="tocline"><a class="tocxref" href="#index-defined-elsewhere"><bdi class="secno">A.2 </bdi>Terms defined by reference</a></li></ol></li></ol></nav>
 
   
   <section class="informative" id="about-json-fg"><div class="header-wrapper"><h2 id="x1-about-json-fg"><bdi class="secno">1. </bdi>About JSON-FG</h2><a class="self-link" href="#about-json-fg" aria-label="Permalink for Section 1."></a></div><p><em>This section is non-normative.</em></p>
@@ -616,8 +623,8 @@ attribute</p>
 <p>This conforms to the JSON-FG spec, but is not always what you want. Another option is to leave <code>geometry</code> empty (i.e. null value) and only fill the <code>place</code> member. You can instruct GDAL to do that, using the <code>WRITE_GEOMETRY=NO</code> option. </p>
 <p>When to fill <code>geometry</code>, and when to give it a null value: </p>
 <ul>
-<li>When the JSON-FG is a payload of an API, the client would have asked specifically for JSON-FG, and therefore knows what it is and how to use it. In that case, it's unnecessary to enlarge the payload with <code>geometry</code> members containing converted coordinates. The client probably wants the original coordinates or the specific CRS it asked for. If a client wants GeoJSON, with WGS84 coordinates, it can ask for that. </li>
-<li>When publishing or sending JSON-FG somewhere outside the context of a webservice/API, it does make sense to fill <code>geometry</code> as well as <code>place</code>. In that case, the user has no context that helps figure out what the file is. There is no mime type or anything like that. In that case, it is good practice to have the fallback geometry, so that the file can be used in GeoJSON clients as well as JSON-FG clients.</li>
+<li>When the JSON-FG is a payload of an API, this is clear from the response media type. The client probably asked specifically for JSON-FG, and therefore knows what it is and how to use it. In that case, it's unnecessary to enlarge the payload with <code>geometry</code> members containing converted coordinates. The client probably wants the specific CRS it asked for. If a client wants GeoJSON, with WGS84 coordinates, it can ask for that. </li>
+<li>When publishing JSON-FG somewhere outside the context of a webservice/API, it does make sense to fill <code>geometry</code> as well as <code>place</code>. In that case, the user has no context that helps figure out what the file is. There is no mime type or anything like that. In that case, it is good practice to have the fallback geometry, so that the file can be used in GeoJSON clients as well as JSON-FG clients.</li>
 </ul>
 </section><section id="time"><div class="header-wrapper"><h3 id="x4-2-time"><bdi class="secno">4.2 </bdi>Time</h3><a class="self-link" href="#time" aria-label="Permalink for Section 4.2"></a></div>
 <p>The <code>time</code> member initially was filled with a <code>null</code> value by GDAL, because it could not identify the temporal information to use in the source data. There is no specific option in GDAL to point to the right source element. It looks for an element called <code>time</code>, <code>time_start</code>, or <code>time_end</code>. If that's not what it's called in your input, you need to do some remapping. You can do this e.g. with an SQL statement: </p>
@@ -630,24 +637,62 @@ attribute</p>
 </section><section id="x3d-geometries"><div class="header-wrapper"><h3 id="x4-4-3d-geometries"><bdi class="secno">4.4 </bdi>3D geometries</h3><a class="self-link" href="#x3d-geometries" aria-label="Permalink for Section 4.4"></a></div>
 <p>TODO. </p>
 </section><section id="sample-output"><div class="header-wrapper"><h3 id="x4-5-sample-output"><bdi class="secno">4.5 </bdi>Sample output</h3><a class="self-link" href="#sample-output" aria-label="Permalink for Section 4.5"></a></div>
-<p>A sample file converted from IMGeo GML, containing trash bins the area of the Binnenhof, The Hague is <a href="https://github.com/Geonovum/test-ogc-json-fg/blob/main/testdata/bgt/citygml/bgt_bak.json">here</a>. This has both <code>place</code> and <code>geometry</code> with coordinate values, <code>time</code> element with date values, only 2D point geometries. </p>
+<p>A sample file converted from IMGeo GML, containing trash bins the area of the Binnenhof, The Hague is <a href="https://github.com/Geonovum/test-ogc-json-fg/blob/main/testdata/bgt/citygml/bgt_bak.json">here</a>. This has both <code>place</code> and <code>geometry</code> with coordinate values, <code>time</code> element with date values, and only contains 2D point geometries. </p>
 </section><section id="client-tests"><div class="header-wrapper"><h3 id="x4-6-client-tests"><bdi class="secno">4.6 </bdi>Client tests</h3><a class="self-link" href="#client-tests" aria-label="Permalink for Section 4.6"></a></div>
 <p>We tested the sample output in different clients. </p>
 <p>GeoJSON clients:</p>
 <ol>
 <li>Github file preview. When <code>geometry</code> has coordinate values, this shows a map with point features. When <code>geometry</code> is null, it shows a world map without features. So this works as expected.</li>
-<li><a href="https://geojson.io/">geojson.io</a> (mapbox). Result is the same as [1]. </li>
-<li>QGIS also works the same; it recognizes features in the file only if <code>geometry</code> has coordinates. It reads properties and ignores JSON-FG specific members.</li>
+</ol>
+<figure id="fig-github-file-preview-with-coordinates-in-geometry">
+    <img src="media/bakjsoningithubpreview.png" alt="bakjsoningithubpreview">
+    <figcaption><a class="self-link" href="#fig-github-file-preview-with-coordinates-in-geometry">Figure <bdi class="figno">1</bdi></a> <span class="fig-title">Github file preview, with coordinates in <code>geometry</code></span></figcaption>
+</figure>
+
+<figure id="fig-github-file-preview-without-coordinates-in-geometry">
+    <img src="media/bakjsoningithubpreview_nogeometry.png" alt="bakjsoningithubpreview_nogeometry">
+    <figcaption><a class="self-link" href="#fig-github-file-preview-without-coordinates-in-geometry">Figure <bdi class="figno">2</bdi></a> <span class="fig-title">Github file preview, without coordinates in <code>geometry</code></span></figcaption>
+</figure>
+
+<ol start="2">
+<li><a href="https://geojson.io/">geojson.io</a> (mapbox). Result is the same as [1].</li>
+</ol>
+<figure id="fig-geojson-io-viewer-with-coordinates-in-geometry">
+    <img src="media/bakingeojsonio.png" alt="bakingeojsonio">
+    <figcaption><a class="self-link" href="#fig-geojson-io-viewer-with-coordinates-in-geometry">Figure <bdi class="figno">3</bdi></a> <span class="fig-title">geojson.io viewer, with coordinates in <code>geometry</code></span></figcaption>
+</figure>
+<figure id="fig-geojson-io-viewer-without-coordinates-in-geometry">
+    <img src="media/bakingeojsonio_nogeometry.png" alt="bakingeojsonio_nogeometry">
+    <figcaption><a class="self-link" href="#fig-geojson-io-viewer-without-coordinates-in-geometry">Figure <bdi class="figno">4</bdi></a> <span class="fig-title">geojson.io viewer, without coordinates in <code>geometry</code></span></figcaption>
+</figure>
+
+<ol start="3">
+<li>QGIS also works the same; it recognizes features in the file only if <code>geometry</code> has coordinates. It reads <code>properties</code> and ignores JSON-FG specific members.</li>
 </ol>
 <p>JSON-FG clients: </p>
 <ul>
-<li>A <a href="https://ivansanchez.gitlab.io/gleo/demos/jsonfg-drag-drop.html">JSON-FG client</a> by Ivan Sanchez from an earlier code sprint is used to demonstrate that the JSON-FG output from GDAL can be visualised in a web browser. This works as expected.</li>
+<li>A <a href="https://ivansanchez.gitlab.io/gleo/demos/jsonfg-drag-drop.html">JSON-FG client</a> by Ivan Sanchez from an earlier code sprint is used to demonstrate that the JSON-FG output from GDAL can be visualised in a web browser. This works as expected. The client visualizes the features based on the values of the <code>place</code> member, regardless of the presence or absence of coordinates in the <code>geometry</code> member.</li>
 </ul>
-</section></section>
+<figure id="fig-json-fg-client-showing-features-based-on-coordinates-in-place-member">
+    <img src="media/ivansanchez.gitlab.io.png" alt="ivansanchez.gitlab.io">
+    <figcaption><a class="self-link" href="#fig-json-fg-client-showing-features-based-on-coordinates-in-place-member">Figure <bdi class="figno">5</bdi></a> <span class="fig-title">JSON-FG client showing features based on coordinates in <code>place</code> member</span></figcaption>
+</figure></section></section>
   
 
   <section id="conformance"><div class="header-wrapper"><h2 id="x5-conformance"><bdi class="secno">5. </bdi>Conformance</h2><a class="self-link" href="#conformance" aria-label="Permalink for Section 5."></a></div><p>As well as sections marked as non-normative, all authoring guidelines, diagrams, examples, and notes in this specification are non-normative. Everything else in this specification is normative.</p></section>
-  <section id="tof"></section>
+  <section id="tof"><div class="header-wrapper"><h2 id="x6-list-of-figures"><bdi class="secno">6. </bdi>List of Figures</h2><a class="self-link" href="#tof" aria-label="Permalink for Section 6."></a></div><ul class="tof">
+        <li class="tofline">
+    <a class="tocxref" href="#fig-github-file-preview-with-coordinates-in-geometry"><span class="self-link">Figure <bdi class="figno">1</bdi></span> <span class="fig-title">Github file preview, with coordinates in <code>geometry</code></span></a>
+  </li><li class="tofline">
+    <a class="tocxref" href="#fig-github-file-preview-without-coordinates-in-geometry"><span class="self-link">Figure <bdi class="figno">2</bdi></span> <span class="fig-title">Github file preview, without coordinates in <code>geometry</code></span></a>
+  </li><li class="tofline">
+    <a class="tocxref" href="#fig-geojson-io-viewer-with-coordinates-in-geometry"><span class="self-link">Figure <bdi class="figno">3</bdi></span> <span class="fig-title">geojson.io viewer, with coordinates in <code>geometry</code></span></a>
+  </li><li class="tofline">
+    <a class="tocxref" href="#fig-geojson-io-viewer-without-coordinates-in-geometry"><span class="self-link">Figure <bdi class="figno">4</bdi></span> <span class="fig-title">geojson.io viewer, without coordinates in <code>geometry</code></span></a>
+  </li><li class="tofline">
+    <a class="tocxref" href="#fig-json-fg-client-showing-features-based-on-coordinates-in-place-member"><span class="self-link">Figure <bdi class="figno">5</bdi></span> <span class="fig-title">JSON-FG client showing features based on coordinates in <code>place</code> member</span></a>
+  </li>
+      </ul></section>
   <section id="index" class="appendix"><div class="header-wrapper"><h2 id="a-index"><bdi class="secno">A. </bdi>Index</h2><a class="self-link" href="#index" aria-label="Permalink for Appendix A."></a></div><section id="index-defined-here">
     <div class="header-wrapper"><h3 id="a-1-terms-defined-by-this-specification"><bdi class="secno">A.1 </bdi>Terms defined by this specification</h3><a class="self-link" href="#index-defined-here" aria-label="Permalink for Appendix A.1"></a></div>
     <ul class="index">
