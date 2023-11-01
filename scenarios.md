@@ -1,23 +1,17 @@
 # Test scenarios
 
-TODO: collect test cases, resultats etc in Excel spreadsheet.
+We collected our test cases and results in an [Excel spreadsheet](https://github.com/Geonovum-labs/test-ogc-json-fg/blob/main/testresults/testscenarios.xlsx).
 
-For example:
+<a href="https://github.com/Geonovum-labs/test-ogc-json-fg/blob/main/testresults/testscenarios.xlsx">
+<figure>
+    <img src="media/testscenarios.png" alt="testscenarios"/>
+    <figcaption>Test scenarios and results</figcaption>
+</figure>
+</a>
 
-N.B. THIS IS AN EXAMPLE SPREADSHEET AND DOES NOT CONTAIN TRUE TEST RESULTS.
+## What we tested
 
-| \#ID    | Case description | Expectation                                                                 | Execution                  | Result | Remarks |
-|---------|------------------|-----------------------------------------------------------------------------|----------------------------|--------|---------|
-| GEOM001 | Prims            |                                                                             |                            |        |         |
-|         | Polyhedron       |                                                                             |                            |        |         |
-| CRS001  | Point in RD      | GDAL writes GML point geometry in RD to JSON-FG place attribute             | GDAL:: GML \> JSON-FG      | OK     |         |
-|         |                  | GDAL writes JSON-FG place attribute to GML point geometry                   | GDAL:: JSON-FG \> GML      | OK     |         |
-|         |                  | GDAL *tolerates* to write JSON-FG place attribute to GeoJSON point geometry | GDAL :: JSON-FG \> GeoJSON | NOT OK |         |
-|         | Line in RD       |                                                                             |                            |        |         |
-|         | Polygon          |                                                                             |                            |        |         |
-
-## Draft specification
-
+### JSON FG Spec requirements
 -   Geometry:
 
     -   (Multi)Point, (Multi)Line, Multi(Polygon), GeometryCollection in *place*
@@ -41,21 +35,14 @@ N.B. THIS IS AN EXAMPLE SPREADSHEET AND DOES NOT CONTAIN TRUE TEST RESULTS.
 
 -   Temporal:
 
-    -   CreationDate
-
-    -   tijdstipregistratie
-
-    -   Tijdlijn geldigheid vs. tijdlijn registratie
+    -   different source attributes to time instant + interval
 
 -   Feature metadata
 
-    -   ?? Feature schema: JSON schema of BGT?
+    -   Feature schema: JSON schema 
+    -   Combine two datasets of BAG and BGT in 1 dataset?
 
-        -   Combine two datasets of BAG and BGT in 1 dataset?
-
-## GDAL-dev implementation
-
-### Formats JSON-FG \<\>:
+### Formats
 
 -   GML
 
@@ -77,11 +64,11 @@ N.B. THIS IS AN EXAMPLE SPREADSHEET AND DOES NOT CONTAIN TRUE TEST RESULTS.
 
         -   Others:
 
-            -   Arcs?
+            -   Arcs
 
             -   
 
-## Test execution
+### Test execution
 
 -   Datasets:
 
@@ -91,4 +78,4 @@ N.B. THIS IS AN EXAMPLE SPREADSHEET AND DOES NOT CONTAIN TRUE TEST RESULTS.
 
         -   BAG extruded polygons (Prims)
 
-        -   Bestuurlijke gebieden (temporal aspects)
+        -   Dutch administrative areas (temporal aspects)
