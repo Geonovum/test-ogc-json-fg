@@ -75,7 +75,7 @@ wether you want geometries in both geometry and place member
     "coordRefSys": "[EPSG:28992]",
     "properties": {
         "lokaalid": "G0518.1e0a6f158f7be183e053530a0b0a8a7d",
-        "objectbegintijd": "2015-08-17T00:00:00Z",
+        "objectbegintijd": "2015-08-17",
         "tijdstipregistratie": "2015-08-17T14:26:33Z",
         "lv-publicatiedatum": "2018-06-21T16:17:38Z",
         "bgt-type": "niet-bgt",
@@ -173,8 +173,6 @@ zone) as time_start.
 }
 </pre>
 
-## 
-
 ## Dutch municipalities from 2003
 
 **Goal**
@@ -196,7 +194,7 @@ according tot he municipality reorganizations since 2003:
 
 We update the geometry with the latest available geometry in the datasets.
 
-Ultimately we export to a GPKG-file with municipalities including the code,
+Ultimately, we export to a GPKG-file with municipalities including the code,
 name, creation date and termination date for each municipality.
 
 **Remarks**
@@ -211,6 +209,63 @@ Finally, the GPKG file is exported to a JSON-FG using the GDAL draft
 implementation.
 
 **Result**
+
+{
+    "type": "FeatureCollection",
+    "conformsTo": [
+        "[ogc-json-fg-1-0.1:core]"
+    ],
+    "featureType": "Nederlandse gemeenten vanaf 2003",
+    "coordRefSys": "[EPSG:28992]",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "0258",
+                "naam": "Kesteren",
+                "begingeldigheid": "2003-01-01",
+                "eindgeldheid": "2003-04-01"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            5.6053545,
+                            51.9428509
+                        ],
+                        ...
+                        [
+                            5.6053545,
+                            51.9428509
+                        ]
+                    ]
+                ]
+            },
+            "place": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            170000.0,
+                            439400.0
+                        ],
+                        ...
+                        [
+                            170000.0,
+                            439400.0
+                        ]
+                    ]
+                ]
+            },
+            "time": {
+                "interval": [
+                    "2003-01-01",
+                    "2003-04-01"
+                ]
+            }
+        }
+</pre>
 
 ## Buildings as 3D Prisms
 
@@ -230,170 +285,112 @@ of to the “base” property, the groundlevel to the “lower” property, and
 **Result**
 
 *To be extended…*
-
+<pre>
 {
-
-"type": "FeatureCollection",
-
-"title": "SINGLE PRISM OBJECT FROM 3DBAG SURROUNDING BINNENHOF",
-
-"conformsTo": ["[ogc-json-fg-1-0.1:core]"],
-
-"features": [
-
-{
-
-"type": "Feature",
-
-"properties": {"identificatie": "NL.IMBAG.Pand.0518100000203254"},
-
-"geometry": {
-
-"type": "Point",
-
-"coordinates": [
-
-4.310054697,
-
-52.077976081
-
-]
-
-},
-
-"place": {
-
-"type": "Prism",
-
-"base": {
-
-"type": "Polygon",
-
-"crs": {
-
-"type": "name",
-
-"properties": {"name": "EPSG:7415"}
-
-},
-
-"coordinates": [
-
-[
-
-[
-
-81147.6875,
-
-454955.46875
-
-],
-
-[
-
-81155.7578125,
-
-454946.59375
-
-],
-
-[
-
-81162.0546875,
-
-454951.375
-
-],
-
-[
-
-81161.6171875,
-
-454951.90625
-
-],
-
-[
-
-81169.9453125,
-
-454956.875
-
-],
-
-[
-
-81168.2265625,
-
-454960.5625
-
-],
-
-[
-
-81165.03125,
-
-454967.5625
-
-],
-
-[
-
-81159.4609375,
-
-454964.59375
-
-],
-
-[
-
-81156.78125,
-
-454962.5625
-
-],
-
-[
-
-81147.6875,
-
-454955.46875
-
-]
-
-]
-
-]
-
-},
-
-"lower": 1.2849999666214,
-
-"upper": 11.3428896665573
-
-},
-
-"time": {"date": "1934-01-01"}
-
+    "type": "FeatureCollection",
+    "title": "SINGLE PRISM OBJECT FROM 3DBAG SURROUNDING BINNENHOF",
+    "conformsTo": [
+        "[ogc-json-fg-1-0.1:core]"
+    ],
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "identificatie": "NL.IMBAG.Pand.0518100000203254"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.310054697,
+                    52.077976081
+                ]
+            },
+            "place": {
+                "type": "Prism",
+                "base": {
+                    "type": "Polygon",
+                    "crs": {
+                        "type": "name",
+                        "properties": {
+                            "name": "EPSG:7415"
+                        }
+                    },
+                    "coordinates": [
+                        [
+                            [
+                                81147.6875,
+                                454955.46875
+                            ],
+                            [
+                                81155.7578125,
+                                454946.59375
+                            ],
+                            [
+                                81162.0546875,
+                                454951.375
+                            ],
+                            [
+                                81161.6171875,
+                                454951.90625
+                            ],
+                            [
+                                81169.9453125,
+                                454956.875
+                            ],
+                            [
+                                81168.2265625,
+                                454960.5625
+                            ],
+                            [
+                                81165.03125,
+                                454967.5625
+                            ],
+                            [
+                                81159.4609375,
+                                454964.59375
+                            ],
+                            [
+                                81156.78125,
+                                454962.5625
+                            ],
+                            [
+                                81147.6875,
+                                454955.46875
+                            ]
+                        ]
+                    ]
+                },
+                "lower": 1.2849999666214,
+                "upper": 11.3428896665573
+            },
+            "time": {
+                "date": "1934-01-01"
+            }
+        }
+    ]
 }
-
-]
-
-}
+</pre>
 
 ## Buildings as Polyhedrals
 
-*To validate…*
+*File to be validated…*
 
 ## Circular arc interpolation
 
 **Goal**
-
 With this example file we want to demonstrate the use of circular arc
 interpolation in JSON-FG. Currently, circular arc interpolation in JSON-FG is
 still under discussion and not part of the draft specification and . However, an
 propsal for it is made in this document:
 <https://github.com/opengeospatial/ogc-feat-geo-json/blob/main/proposals/circular-geometry-objects.adoc>
+
+The BGT standard allows the application of circular arcs on top of the Simple Features. The use of circular arcs 
+in the BGT is also a recurring discussion here: circular arcs would hinder the step to 3D and cause problems in maintaining 
+the topology. However, the circular arcs are still included in the model and registration of the BGT for good reasons, namely 
+the reduction of the number of coordinates and in line with the terrestrial method of collection.
+
+For updating or exchanging the BGT source data based on JSON-FG, it is therefore recommended to extend 
+the draft specification with circular string interpolation.
 
 **Process**
 
@@ -410,206 +407,107 @@ the place member.
 
 *To be extended…*
 
+<pre>
 {
-
-"type": "Feature",
-
-"featureType": "wegdeel",
-
-"coordRefSys": "[EPSG:28992]",
-
-"properties": {
-
-"lokaalid": "G0518.1e0a6f175bbae183e053530a0b0a8a7d",
-
-"objectbegintijd": "2015-08-17T00:00:00Z",
-
-"objecteindtijd": null,
-
-"tijdstipregistratie": "2018-06-21T14:23:20Z",
-
-"eindregistratie": "2021-11-22T16:40:21Z",
-
-"lv-publicatiedatum": "2018-06-21T16:17:38Z",
-
-"bgt-fysiekvoorkomen": "open verharding",
-
-"plus_fysiekvoorkomen": "gebakken klinkers",
-
-"bgt-functie": "voetpad",
-
-"plus-functie": null
-
-},
-
-"geometry": null,
-
-"place": {
-
-{
-
-"type": "CurvePolygon",
-
-"coordinates": [
-
-{
-
-"type": "CompoundCurve",
-
-"coordinates": [
-
-{
-
-"type": "Arc",
-
-"coordinates": [
-
-[
-
-81181.685,
-
-455198.326
-
-],
-
-[
-
-81180.715,
-
-455196.105
-
-],
-
-[
-
-81181.004,
-
-455189.334
-
-]
-
-]
-
-},
-
-{
-
-"type": "LineString",
-
-"coordinates": [
-
-[
-
-81181.004,
-
-455189.334
-
-],
-
-[
-
-81186.059,
-
-455181.659
-
-],
-
-[
-
-81186.651,
-
-455180.761
-
-],
-
-[
-
-81191.142,
-
-455173.585
-
-],
-
-[
-
-81197.21,
-
-455162.659
-
-],
-
-[
-
-81199.115,
-
-455158.495
-
-],
-
-[
-
-81203.405,
-
-455160.479
-
-],
-
-[
-
-81195.976,
-
-455176.612
-
-],
-
-[
-
-81194.726,
-
-455178.463
-
-],
-
-[
-
-81194.436,
-
-455179.056
-
-],
-
-[
-
-81194.067,
-
-455179.194
-
-],
-
-[
-
-81194.132,
-
-455179.411
-
-],
-
-[
-
-81181.685,
-
-455198.326
-
-]
-
-]
-
-}
-
-]
-
-}
-
-}
-
-}
+    "type": "Feature",
+    "featureType": "wegdeel",
+    "coordRefSys": "[EPSG:28992]",
+    "properties": {
+        "lokaalid": "G0518.1e0a6f175bbae183e053530a0b0a8a7d",
+        "objectbegintijd": "2015-08-17T00:00:00Z",
+        "objecteindtijd": null,
+        "tijdstipregistratie": "2018-06-21T14:23:20Z",
+        "eindregistratie": "2021-11-22T16:40:21Z",
+        "lv-publicatiedatum": "2018-06-21T16:17:38Z",
+        "bgt-fysiekvoorkomen": "open verharding",
+        "plus_fysiekvoorkomen": "gebakken klinkers",
+        "bgt-functie": "voetpad",
+        "plus-functie": null
+    },
+    "geometry": null,
+    "place": {
+        {
+            "type": "CurvePolygon",
+            "coordinates": [
+                {
+                    "type": "CompoundCurve",
+                    "coordinates": [
+                        {
+                            "type": "Arc",
+                            "coordinates": [
+                                [
+                                    81181.685,
+                                    455198.326
+                                ],
+                                [
+                                    81180.715,
+                                    455196.105
+                                ],
+                                [
+                                    81181.004,
+                                    455189.334
+                                ]
+                            ]
+                        },
+                        {
+                            "type": "LineString",
+                            "coordinates": [
+                                [
+                                    81181.004,
+                                    455189.334
+                                ],
+                                [
+                                    81186.059,
+                                    455181.659
+                                ],
+                                [
+                                    81186.651,
+                                    455180.761
+                                ],
+                                [
+                                    81191.142,
+                                    455173.585
+                                ],
+                                [
+                                    81197.21,
+                                    455162.659
+                                ],
+                                [
+                                    81199.115,
+                                    455158.495
+                                ],
+                                [
+                                    81203.405,
+                                    455160.479
+                                ],
+                                [
+                                    81195.976,
+                                    455176.612
+                                ],
+                                [
+                                    81194.726,
+                                    455178.463
+                                ],
+                                [
+                                    81194.436,
+                                    455179.056
+                                ],
+                                [
+                                    81194.067,
+                                    455179.194
+                                ],
+                                [
+                                    81194.132,
+                                    455179.411
+                                ],
+                                [
+                                    81181.685,
+                                    455198.326
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+</pre>
