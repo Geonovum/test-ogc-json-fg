@@ -68,65 +68,37 @@ wether you want geometries in both geometry and place member
 
 **Result**
 
-\<\<code\>\>
-
+<pre>
 {
-
-"type": "Feature",
-
-"featureType": "paal",
-
-"coordRefSys": "[EPSG:28992]",
-
-"properties": {
-
-"lokaalid": "G0518.1e0a6f158f7be183e053530a0b0a8a7d",
-
-"objectbegintijd": "2015-08-17T00:00:00Z",
-
-"tijdstipregistratie": "2015-08-17T14:26:33Z",
-
-"lv-publicatiedatum": "2018-06-21T16:17:38Z",
-
-"bgt-type": "niet-bgt",
-
-"plus-type": "afsluitpaal",
-
-"hectometeraanduiding": null
-
-},
-
-"geometry": {
-
-"type": "Point",
-
-"coordinates": [
-
-4.3123011,
-
-52.0814892
-
-]
-
-},
-
-"place": {
-
-"type": "Point",
-
-"coordinates": [
-
-81320.4,
-
-455347.397
-
-]
-
-},
-
-"time": null
-
-},
+    "type": "Feature",
+    "featureType": "paal",
+    "coordRefSys": "[EPSG:28992]",
+    "properties": {
+        "lokaalid": "G0518.1e0a6f158f7be183e053530a0b0a8a7d",
+        "objectbegintijd": "2015-08-17T00:00:00Z",
+        "tijdstipregistratie": "2015-08-17T14:26:33Z",
+        "lv-publicatiedatum": "2018-06-21T16:17:38Z",
+        "bgt-type": "niet-bgt",
+        "plus-type": "afsluitpaal",
+        "hectometeraanduiding": null
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [
+            4.3123011,
+            52.0814892
+        ]
+    },
+    "place": {
+        "type": "Point",
+        "coordinates": [
+            81320.4,
+            455347.397
+        ]
+    },
+    "time": null
+}
+</pre>
 
 ## 
 
@@ -142,8 +114,9 @@ there are requirements on including both a date and time object, thats is the
 date in the time object must be equal to the date in the date object.All times
 in JSON-FG
 
-NOTE: The are strict requirements on the use of multiple temporal objects in the
+<details class="note">The are strict requirements on the use of multiple temporal objects in the
 time member of an JSON-FG and all timestamps are in UTC.
+</details>
 
 **Process**
 
@@ -161,71 +134,44 @@ We create an example datasets with the GDAL draft implementation:
 \- a dataset with tijdstipregistratie and eindregistratie in the interval object
 of the time member.
 
-NOTE: In GDAL you should cast the start time to the time_start and the end time
+<details class="note"> In GDAL you should cast the start time to the time_start and the end time
 to an time_end, for example CAST(tijdstipregistratie as timestamp with time
 zone) as time_start.
+</details>
 
 **Result**
 
-\<\<code\>\>
-
+<pre>
 {
-
-"type": "Feature",
-
-"featureType": "vegetatieobject",
-
-"coordRefSys": "[EPSG:28992]",
-
-"properties": {
-
-"lokaalid": "G0518.1e0a6f1604dee183e053530a0b0a8a7d",
-
-"objectbegintijd": "2015-08-17",
-
-"objecteindtijd": "2019-06-26",
-
-"tijdstipregistratie": "2015-08-17T14:24:05",
-
-"eindregistratie": "2019-06-26T15:08:45",
-
-"lv-publicatiedatum": "2015-09-15T10:25:33",
-
-"bgt-type": "niet-bgt",
-
-"plus-type": "boom"
-
-},
-
-"geometry": null,
-
-"place": {
-
-"type": "Point",
-
-"coordinates": [
-
-81541.038,
-
-455189.515
-
-]
-
-},
-
-"time": {
-
-"interval": [
-
-"2015-08-17T13:24:05Z",
-
-"2019-06-26T14:08:45Z"
-
-]
-
+    "type": "Feature",
+    "featureType": "vegetatieobject",
+    "coordRefSys": "[EPSG:28992]",
+    "properties": {
+        "lokaalid": "G0518.1e0a6f1604dee183e053530a0b0a8a7d",
+        "objectbegintijd": "2015-08-17",
+        "objecteindtijd": "2019-06-26",
+        "tijdstipregistratie": "2015-08-17T14:24:05",
+        "eindregistratie": "2019-06-26T15:08:45",
+        "lv-publicatiedatum": "2015-09-15T10:25:33",
+        "bgt-type": "niet-bgt",
+        "plus-type": "boom"
+    },
+    "geometry": null,
+    "place": {
+        "type": "Point",
+        "coordinates": [
+            81541.038,
+            455189.515
+        ]
+    },
+    "time": {
+        "interval": [
+            "2015-08-17T13:24:05Z",
+            "2019-06-26T14:08:45Z"
+        ]
+    }
 }
-
-},
+</pre>
 
 ## 
 
