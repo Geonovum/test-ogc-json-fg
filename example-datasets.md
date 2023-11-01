@@ -102,8 +102,6 @@ wether you want geometries in both geometry and place member
 }
 </pre>
 
-## 
-
 ## current and historic topographic BGT features
 
 **Goal**
@@ -136,9 +134,8 @@ We create an example datasets with the GDAL draft implementation:
 \- a dataset with tijdstipregistratie and eindregistratie in the interval object
 of the time member.
 
-<details class="note"> In GDAL you should cast the start time to the time_start and the end time
-to an time_end, for example CAST(tijdstipregistratie as timestamp with time
-zone) as time_start.
+<details class="note">In GDAL you should cast the start time to the "time_start" property and the end time
+to the "time_end" property of the interval object.
 </details>
 
 **Result**
