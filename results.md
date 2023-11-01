@@ -28,7 +28,7 @@ There is no option to have GDAL write the featureSchema with a URL pointing to a
 
 ## 3D geometries
 
-TODO. 
+GDAL converts the 3D geometry types without problems. 
 
 ## Sample output
 A sample file converted from IMGeo GML, containing trash bins the area of the Binnenhof, The Hague is [here](https://github.com/Geonovum/test-ogc-json-fg/blob/main/testdata/bgt/citygml/bgt_bak.json). This has both `place` and `geometry` with coordinate values, `time` element with date values, and only contains 2D point geometries. 
@@ -64,7 +64,7 @@ GeoJSON clients:
 3. QGIS also works the same; it recognizes features in the file only if `geometry` has coordinates. It reads `properties` and ignores JSON-FG specific members.
 
 JSON-FG clients: 
-- A [JSON-FG client](https://ivansanchez.gitlab.io/gleo/demos/jsonfg-drag-drop.html) by Ivan Sanchez from an earlier code sprint is used to demonstrate that the JSON-FG output from GDAL can be visualised in a web browser. This works as expected. The client visualizes the features based on the values of the `place` member, regardless of the presence or absence of coordinates in the `geometry` member. 
+- A [JSON-FG client](https://ivansanchez.gitlab.io/gleo/demos/jsonfg-drag-drop.html) by Ivan Sanchez from an earlier code sprint is used to demonstrate that the JSON-FG output from GDAL can be visualised in a web browser. This works as expected. The client visualizes the features based on the values of the `place` member, regardless of the presence or absence of coordinates in the `geometry` member. Note that this client only supports 2D geometries, we did not do client tests with 3D geometries. 
 
 <figure>
     <img src="media/ivansanchez.gitlab.io.png" alt="ivansanchez.gitlab.io"/>
