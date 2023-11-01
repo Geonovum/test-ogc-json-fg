@@ -1,5 +1,5 @@
 # Results
-The complete list of tests and results is available in this [excel file][]. We tested most of the JSON-FG features, and found no issues in the GDAL implementation of it. 
+The complete list of tests and results is available in this [excel file](https://github.com/Geonovum-labs/test-ogc-json-fg/blob/main/testresults/testscenarios.xlsx). We found no bugs or issues in the GDAL implementation. 
 
 ## Geometry and place
 The source data contained coordinates in the Dutch coordinate reference system RD. When converting to JSON-FG, by default GDAL: 
