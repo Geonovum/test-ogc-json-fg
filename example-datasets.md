@@ -70,6 +70,8 @@ wether you want geometries in both geometry and place member
 
 **Result**
 
+![BGT features in JSON-FG visualized in QGIS](media/bgt-json-fg-in-qgis.png)
+
 <pre>
 {
     "type": "Feature",
