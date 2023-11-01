@@ -5,7 +5,7 @@ touch on the various specific topics of JSON-FG, such as inclusion of geometry
 with CRS other than WGS'84 in the place member, temporal information in the time
 member and 3D geometries.
 
-We created 5 JSON-FG example datasets:
+We created 6 JSON-FG example datasets:
 
 1.  current topographic BGT features
 
@@ -16,6 +16,8 @@ We created 5 JSON-FG example datasets:
 4.  Buildings as 3D Prims
 
 5.  Buildings as Polyhedrals
+
+6.  Circular arc interpolation
 
 We used the GDAL draft implementation to convert from GPKG, PostgreSQL or GML
 files to JSON-FG. All objects in the example datasets intersect with the
@@ -225,6 +227,8 @@ zone) as time_start.
 
 },
 
+## 
+
 ## Dutch municipalities from 2003
 
 **Goal**
@@ -260,26 +264,406 @@ name, creation date and termination date for each municipality.
 Finally, the GPKG file is exported to a JSON-FG using the GDAL draft
 implementation.
 
-Result:
+**Result**
 
 ## Buildings as 3D Prisms
 
-With this example file we want to demonstrate the use of temporal information in
-JSON-FG datasets. The JSON-FG draft specification enables to include temporal
-information in the time member of a file. The time member may contain an date
-object, time object or interval object, or either all three of them. However,
-there are requirements on including both a date and time object, thats is the
-date in the time object must be equal to the date in the date object.All times
-in JSON-FG
+**Goal**
 
-## 
+With this example file we want to demonstrate the use of 3D prisms in JSON-FG.
+The JSON-FG draft specification describes an easy way to include extruded point,
+line or polygon geometries.
+
+**Process**
+
+We use the LOD12_2d 3D BAG features as a source file. We import this layer in an
+PostGIS-database and create a SQL-script that writes the GeoJSON-representation
+of to the “base” property, the groundlevel to the “lower” property, and
+70p-height to the “upper” property of the Prism.
+
+**Result**
+
+*To be extended…*
+
+{
+
+"type": "FeatureCollection",
+
+"title": "SINGLE PRISM OBJECT FROM 3DBAG SURROUNDING BINNENHOF",
+
+"conformsTo": ["[ogc-json-fg-1-0.1:core]"],
+
+"features": [
+
+{
+
+"type": "Feature",
+
+"properties": {"identificatie": "NL.IMBAG.Pand.0518100000203254"},
+
+"geometry": {
+
+"type": "Point",
+
+"coordinates": [
+
+4.310054697,
+
+52.077976081
+
+]
+
+},
+
+"place": {
+
+"type": "Prism",
+
+"base": {
+
+"type": "Polygon",
+
+"crs": {
+
+"type": "name",
+
+"properties": {"name": "EPSG:7415"}
+
+},
+
+"coordinates": [
+
+[
+
+[
+
+81147.6875,
+
+454955.46875
+
+],
+
+[
+
+81155.7578125,
+
+454946.59375
+
+],
+
+[
+
+81162.0546875,
+
+454951.375
+
+],
+
+[
+
+81161.6171875,
+
+454951.90625
+
+],
+
+[
+
+81169.9453125,
+
+454956.875
+
+],
+
+[
+
+81168.2265625,
+
+454960.5625
+
+],
+
+[
+
+81165.03125,
+
+454967.5625
+
+],
+
+[
+
+81159.4609375,
+
+454964.59375
+
+],
+
+[
+
+81156.78125,
+
+454962.5625
+
+],
+
+[
+
+81147.6875,
+
+454955.46875
+
+]
+
+]
+
+]
+
+},
+
+"lower": 1.2849999666214,
+
+"upper": 11.3428896665573
+
+},
+
+"time": {"date": "1934-01-01"}
+
+}
+
+]
+
+}
 
 ## Buildings as Polyhedrals
 
-BGT current data
+*To validate…*
 
-BGT temporal
+## Circular arc interpolation
 
-Gemeenten
+**Goal**
 
-Prism
+With this example file we want to demonstrate the use of circular arc
+interpolation in JSON-FG. Currently, circular arc interpolation in JSON-FG is
+still under discussion and not part of the draft specification and . However, an
+propsal for it is made in this document:
+<https://github.com/opengeospatial/ogc-feat-geo-json/blob/main/proposals/circular-geometry-objects.adoc>
+
+**Process**
+
+The BGT test dataset contains features having CurvePolygon or CompoundCurves
+geometries. However, the GDAL implementation of JSON-FG interpolates circular
+arc strings to linestring segments, so we cannot use GDAL on our BGT dataset to
+get an example feature of an CurvePolygon in JSON-FG.
+
+As the proposal for circular arcs looks pretty much like JSONify of the WKT of
+geometries, we alter the WKT geometry of the BGT to an JSON-FG-ish geometry in
+the place member.
+
+**Result**
+
+*To be extended…*
+
+{
+
+"type": "Feature",
+
+"featureType": "wegdeel",
+
+"coordRefSys": "[EPSG:28992]",
+
+"properties": {
+
+"lokaalid": "G0518.1e0a6f175bbae183e053530a0b0a8a7d",
+
+"objectbegintijd": "2015-08-17T00:00:00Z",
+
+"objecteindtijd": null,
+
+"tijdstipregistratie": "2018-06-21T14:23:20Z",
+
+"eindregistratie": "2021-11-22T16:40:21Z",
+
+"lv-publicatiedatum": "2018-06-21T16:17:38Z",
+
+"bgt-fysiekvoorkomen": "open verharding",
+
+"plus_fysiekvoorkomen": "gebakken klinkers",
+
+"bgt-functie": "voetpad",
+
+"plus-functie": null
+
+},
+
+"geometry": null,
+
+"place": {
+
+{
+
+"type": "CurvePolygon",
+
+"coordinates": [
+
+{
+
+"type": "CompoundCurve",
+
+"coordinates": [
+
+{
+
+"type": "Arc",
+
+"coordinates": [
+
+[
+
+81181.685,
+
+455198.326
+
+],
+
+[
+
+81180.715,
+
+455196.105
+
+],
+
+[
+
+81181.004,
+
+455189.334
+
+]
+
+]
+
+},
+
+{
+
+"type": "LineString",
+
+"coordinates": [
+
+[
+
+81181.004,
+
+455189.334
+
+],
+
+[
+
+81186.059,
+
+455181.659
+
+],
+
+[
+
+81186.651,
+
+455180.761
+
+],
+
+[
+
+81191.142,
+
+455173.585
+
+],
+
+[
+
+81197.21,
+
+455162.659
+
+],
+
+[
+
+81199.115,
+
+455158.495
+
+],
+
+[
+
+81203.405,
+
+455160.479
+
+],
+
+[
+
+81195.976,
+
+455176.612
+
+],
+
+[
+
+81194.726,
+
+455178.463
+
+],
+
+[
+
+81194.436,
+
+455179.056
+
+],
+
+[
+
+81194.067,
+
+455179.194
+
+],
+
+[
+
+81194.132,
+
+455179.411
+
+],
+
+[
+
+81181.685,
+
+455198.326
+
+]
+
+]
+
+}
+
+]
+
+}
+
+}
+
+}
