@@ -1,4 +1,4 @@
-Example datasets
+# Example datasets
 
 During the OGC Code sprint we worked on JSON-FG example datasets. These datasets
 touch on the various specific topics of JSON-FG, such as inclusion of geometry
@@ -23,9 +23,9 @@ bounding box of the buffer of 200 meters around ‘Het Binnenhof’ in The Hague
 
 We will describe each dataset hereafter.
 
-**current topographic BGT features**
+## current topographic BGT features
 
-Goal
+**Goal**
 
 With this example file we want to demonstrate the inclusion of geometries in an
 CRS other than WGS'84. The JSON-FG draft specification requires that geometries
@@ -41,7 +41,7 @@ increasing the file size (and payload).
 NOTE: A JSON-FG file can contain both geometry in WGS'84 in the geometry member
 and geometry in RD in the place member.
 
-Process
+**Process**
 
 We retrieve a full download of the BGT including history from PDOK.
 
@@ -64,13 +64,73 @@ NOTE: With the GDAL layer creation option (lco) WRITE_GEOMETRY you can choose
 wether you want geometries in both geometry and place member
 (WRITE_GEOMETRY=YES) or in one of the two members (WRITE_GEOMETRY=NO).
 
-Result
+**Result**
 
 \<\<code\>\>
 
-**current and historic topographic BGT features**
+{
 
-Goal
+"type": "Feature",
+
+"featureType": "paal",
+
+"coordRefSys": "[EPSG:28992]",
+
+"properties": {
+
+"lokaalid": "G0518.1e0a6f158f7be183e053530a0b0a8a7d",
+
+"objectbegintijd": "2015-08-17T00:00:00Z",
+
+"tijdstipregistratie": "2015-08-17T14:26:33Z",
+
+"lv-publicatiedatum": "2018-06-21T16:17:38Z",
+
+"bgt-type": "niet-bgt",
+
+"plus-type": "afsluitpaal",
+
+"hectometeraanduiding": null
+
+},
+
+"geometry": {
+
+"type": "Point",
+
+"coordinates": [
+
+4.3123011,
+
+52.0814892
+
+]
+
+},
+
+"place": {
+
+"type": "Point",
+
+"coordinates": [
+
+81320.4,
+
+455347.397
+
+]
+
+},
+
+"time": null
+
+},
+
+## 
+
+## current and historic topographic BGT features
+
+**Goal**
 
 With this example file we want to demonstrate the use of temporal information in
 JSON-FG datasets. The JSON-FG draft specification enables to include temporal
@@ -83,7 +143,7 @@ in JSON-FG
 NOTE: The are strict requirements on the use of multiple temporal objects in the
 time member of an JSON-FG and all timestamps are in UTC.
 
-Process
+**Process**
 
 We use again the full download of the BGT including history from PDOK.
 
@@ -103,71 +163,49 @@ NOTE: In GDAL you should cast the start time to the time_start and the end time
 to an time_end, for example CAST(tijdstipregistratie as timestamp with time
 zone) as time_start.
 
-Result:
+**Result**
 
 \<\<code\>\>
-
-"features": [
 
 {
 
 "type": "Feature",
 
-"featureType": "wegdeel",
+"featureType": "vegetatieobject",
 
 "coordRefSys": "[EPSG:28992]",
 
 "properties": {
 
-"lokaalid": "G0518.1e0a6f1751c9e183e053530a0b0a8a7d",
+"lokaalid": "G0518.1e0a6f1604dee183e053530a0b0a8a7d",
 
 "objectbegintijd": "2015-08-17",
 
-"objecteindtijd": "2016-02-13",
+"objecteindtijd": "2019-06-26",
 
-"tijdstipregistratie": "2015-08-17T14:14:31Z",
+"tijdstipregistratie": "2015-08-17T14:24:05",
 
-"eindregistratie": "2016-02-13T09:27:57Z",
+"eindregistratie": "2019-06-26T15:08:45",
 
-"lv-publicatiedatum": "2015-09-15T10:25:33Z",
+"lv-publicatiedatum": "2015-09-15T10:25:33",
 
-"bgt-fysiekvoorkomen": "gesloten verharding",
+"bgt-type": "niet-bgt",
 
-"plus_fysiekvoorkomen": null,
-
-"bgt-functie": "rijbaan lokale weg",
-
-"plus-functie": null
+"plus-type": "boom"
 
 },
 
-"geometry": {
-
-"type": "Polygon",
-
-"coordinates": [
-
-[
-
-…
-
-]
-
-]
-
-},
+"geometry": null,
 
 "place": {
 
-"type": "Polygon",
+"type": "Point",
 
 "coordinates": [
 
-[
+81541.038,
 
-…
-
-]
+455189.515
 
 ]
 
@@ -177,9 +215,9 @@ Result:
 
 "interval": [
 
-"2015-08-17T14:14:31Z",
+"2015-08-17T13:24:05Z",
 
-"2016-02-13T09:27:57Z"
+"2019-06-26T14:08:45Z"
 
 ]
 
@@ -187,14 +225,14 @@ Result:
 
 },
 
-**Dutch municipalities from 2003**
+## Dutch municipalities from 2003
 
-Goal:
+**Goal**
 
 With this example file we again want to demonstrate the use of temporal
 information in JSON-FG datasets.
 
-Process:
+**Process**
 
 We download the ‘wijken-buurten-gemeenten’ datasets from 2003 to 2023 from the
 CBS website, and put them in a PostGIS database. Next we combine all the files
@@ -211,7 +249,7 @@ We update the geometry with the latest available geometry in the datasets.
 Ultimately we export to a GPKG-file with municipalities including the code,
 name, creation date and termination date for each municipality.
 
-Remarks:
+**Remarks**
 
 1.  municipalities that exist in the 2003 dataset and are not terminated, get
     creation date (‘2003-01-01’).
@@ -224,7 +262,7 @@ implementation.
 
 Result:
 
-Buildings as 3D Prims
+## Buildings as 3D Prisms
 
 With this example file we want to demonstrate the use of temporal information in
 JSON-FG datasets. The JSON-FG draft specification enables to include temporal
@@ -234,7 +272,9 @@ there are requirements on including both a date and time object, thats is the
 date in the time object must be equal to the date in the date object.All times
 in JSON-FG
 
-Buildings as Polyhedrals
+## 
+
+## Buildings as Polyhedrals
 
 BGT current data
 
