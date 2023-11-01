@@ -70,6 +70,8 @@ wether you want geometries in both geometry and place member
 
 **Result**
 
+We drag-and-drop the JSON-FG file with geometries in the geometry member in QGIS. See result below.
+
 ![BGT features in JSON-FG visualized in QGIS](media/bgt-json-fg-in-qgis.png)
 
 <pre>
