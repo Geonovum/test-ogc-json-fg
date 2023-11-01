@@ -9,3 +9,7 @@ and its implementation in GDAL GDAL
 as part of the OGC open standards code sprint, London, October 30 - November 1,
 2023
 [https://developer.ogc.org/sprints/22/\#:\~:text=When%20is%20the%20code%20sprint,be%20held%20on%20October%2C%2012](https://developer.ogc.org/sprints/22/#:~:text=When%20is%20the%20code%20sprint,be%20held%20on%20October%2C%2012).
+
+During the code sprint we also worked on:
+- a [JSON-FG linter](https://github.com/Geonovum-labs/json-fg-linter)
+- a [JSON-FG encoding and decoding library for Java](https://github.com/Geonovum-labs/json-fg-java).

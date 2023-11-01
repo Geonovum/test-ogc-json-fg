@@ -12,6 +12,10 @@ https://developer.ogc.org/sprints/22/#:~:text=When%20is%20the%20code%20sprint,be
 
 The document with test results is at https://geonovum-labs.github.io/test-ogc-json-fg.
 
+During the code sprint we also worked on:
+- a [JSON-FG linter](https://github.com/Geonovum-labs/json-fg-linter)
+- a [JSON-FG encoding and decoding library for Java](https://github.com/Geonovum-labs/json-fg-java).
+
 # About JSON-FG
 OGC Features and Geometries JSON (JSON-FG) is a proposal for extending GeoJSON with support for a.o.
 
