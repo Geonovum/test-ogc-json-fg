@@ -1,0 +1,102 @@
+{
+    "type": "Feature",
+    "featureType": "wegdeel",
+    "coordRefSys": "[EPSG:28992]",
+    "properties": {
+        "lokaalid": "G0518.1e0a6f175bbae183e053530a0b0a8a7d",
+        "objectbegintijd": "2015-08-17T00:00:00Z",
+        "objecteindtijd": null,
+        "tijdstipregistratie": "2018-06-21T14:23:20Z",
+        "eindregistratie": "2021-11-22T16:40:21Z",
+        "lv-publicatiedatum": "2018-06-21T16:17:38Z",
+        "bgt-fysiekvoorkomen": "open verharding",
+        "plus_fysiekvoorkomen": "gebakken klinkers",
+        "bgt-functie": "voetpad",
+        "plus-functie": null
+    },
+    "geometry": null,
+    "place": {
+        {
+            "type": "CurvePolygon",
+            "coordinates": [
+                {
+                    "type": "CompoundCurve",
+                    "coordinates": [
+                        {
+                            "type": "Arc",
+                            "coordinates": [
+                                [
+                                    81181.685,
+                                    455198.326
+                                ],
+                                [
+                                    81180.715,
+                                    455196.105
+                                ],
+                                [
+                                    81181.004,
+                                    455189.334
+                                ]
+                            ]
+                        },
+                        {
+                            "type": "LineString",
+                            "coordinates": [
+                                [
+                                    81181.004,
+                                    455189.334
+                                ],
+                                [
+                                    81186.059,
+                                    455181.659
+                                ],
+                                [
+                                    81186.651,
+                                    455180.761
+                                ],
+                                [
+                                    81191.142,
+                                    455173.585
+                                ],
+                                [
+                                    81197.21,
+                                    455162.659
+                                ],
+                                [
+                                    81199.115,
+                                    455158.495
+                                ],
+                                [
+                                    81203.405,
+                                    455160.479
+                                ],
+                                [
+                                    81195.976,
+                                    455176.612
+                                ],
+                                [
+                                    81194.726,
+                                    455178.463
+                                ],
+                                [
+                                    81194.436,
+                                    455179.056
+                                ],
+                                [
+                                    81194.067,
+                                    455179.194
+                                ],
+                                [
+                                    81194.132,
+                                    455179.411
+                                ],
+                                [
+                                    81181.685,
+                                    455198.326
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            }
+        }

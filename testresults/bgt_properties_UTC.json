@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"conformsTo" : ["[ogc-json-fg-1-0.1:core]"],
+"featureType" : "bak",
+"coordRefSys" : "[EPSG:28992]",
+"features" : [
+{ "type": "Feature", "properties": { "gml_id": "b9b9a8b16-4bd7-25a9-9526-942b540f624e", "lowerCorner": "80283.624 454603.124", "upperCorner": "80283.624 454603.124", "creationDate": "2015-08-17", "LV_publicatiedatum": "2018-06-21T16:17:38", "relatieveHoogteligging": 0, "inOnderzoek": false, "tijdstipRegistratie": "2015-08-17T14:14:14", "namespace": "NL.IMGeo", "lokaalID": "G0518.1e0a6f0c5e2be183e053530a0b0a8a7d", "bronhouder": "G0518", "bgt_status": "bestaand", "plus_status": "geenWaarde", "function": "niet-bgt", "plus_type": "afval apart plaats", "terminationDate": "2018-06-21", "eindRegistratie": "2018-06-21T14:23:20" }, "geometry": { "type": "Point", "coordinates": [ 4.2973413, 52.0746617 ] }, "place": { "type": "Point", "coordinates": [ 80283.623999999996158, 454603.12400000001071 ] }, "time": { "interval": [ "2015-08-17T14:14:14Z", "2018-06-21T14:23:20Z" ] } }
+]
+}
